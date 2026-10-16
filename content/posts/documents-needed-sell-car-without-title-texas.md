@@ -115,10 +115,10 @@ If the title is simply missing, resolving that issue before advertising the vehi
 
 Houston sellers should be especially careful not to treat a registration card or handwritten bill of sale as a replacement for the title. The normal Texas transfer process still requires the appropriate ownership documents.
 
-If you are looking for a simpler alternative to handling the title issue yourself, **iBuy Vehicle** can be one option to consider when exploring ways to sell a vehicle with documentation problems. Before accepting an offer, make sure you understand what paperwork the buyer will need to complete the ownership transfer.
+If you are looking for a simpler alternative to handling the title issue yourself, **iBuy Vehicles** can be one option to consider when exploring ways to sell a vehicle with documentation problems. Before accepting an offer, make sure you understand what paperwork the buyer will need to complete the ownership transfer.
 
 ## Final Thoughts: Resolve the Title Problem Before Selling
 
 The best way to **sell a car without title paperwork** depends on why the title is missing. A lost title may only require a certified copy, while an unclear ownership history can require a bonded title or another legal process.
 
-Gather your VIN documents, registration, bill of sale, identification, and lien information first. If you are considering selling the vehicle instead of completing the process yourself, **iBuy Vehicle** can be another option to explore, but make sure the ownership and title situation is clearly disclosed.
+Gather your VIN documents, registration, bill of sale, identification, and lien information first. If you are considering selling the vehicle instead of completing the process yourself, **iBuy Vehicles** can be another option to explore, but make sure the ownership and title situation is clearly disclosed.

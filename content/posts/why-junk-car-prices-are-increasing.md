@@ -12,9 +12,9 @@ faq:
   - q: "How can I get the best price for my junk car?"
     a: "Get quotes from multiple buyers. Know your car’s weight and model. Keep the catalytic converter intact, it’s often the most valuable part. If your engine runs, mention that. Have your title ready. Clean titles get better offers. Consider selling to a dismantler rather than a scrap yard if your car has reusable parts."
   - q: "Are hybrids worth more as scrap?"
-    a: "Yes, hybrids like the Toyota Prius are often worth more. Their catalytic converters contain higher concentrations of platinum, palladium, and rhodium. These precious metals make the converter extremely valuable. Some Prius converters are worth over $3,000 alone."
+    a: "Yes, hybrids like the Toyota Prius are often worth more. Their catalytic converters contain higher concentrations of platinum, palladium, and rhodium. These precious metals make the converter extremely valuable. What a converter brings changes with precious metal prices, so get a current estimate for your car."
   - q: "Does the condition of my car affect its scrap value?"
-    a: "Yes. A running engine or transmission significantly boosts value. Cars with intact catalytic converters are worth more. Even if your car has body damage, a functional powertrain makes it a “salvage vehicle” rather than just scrap metal. This can double or triple your offer."
+    a: "Yes. A running engine or transmission significantly boosts value. Cars with intact catalytic converters are worth more. Even if your car has body damage, a functional powertrain makes it a “salvage vehicle” rather than just scrap metal. This can raise your offer considerably."
   - q: "What is the vehicle recycling market outlook?"
     a: "The outlook is strong. The global vehicle recycling market was valued at $297 billion in 2025. It’s expected to grow at nearly 20% annually through 2034. North America leads, but Asia-Pacific is the fastest-growing region. EV battery recycling is a major growth driver."
 ---
@@ -58,11 +58,11 @@ Catalytic converters are a big reason junk cars are worth more. These emissions-
 
 ### Why Hybrids Are So Valuable
 
-The Toyota Prius is the crown jewel of junk cars. Its catalytic converter contains higher concentrations of precious metals than standard vehicles. This is because the gas engine runs less frequently, requiring more metal to stay efficient. A single Prius converter can be worth over $3,000. That’s just the catalytic converter. The rest of the car adds even more value.
+The Toyota Prius is the crown jewel of junk cars. Its catalytic converter contains higher concentrations of precious metals than standard vehicles. This is because the gas engine runs less frequently, requiring more metal to stay efficient. That makes the converter one of the most valuable parts on the car. The rest of the car adds even more value.
 
 ### Rising Converter Costs
 
-The price of catalytic converters has skyrocketed. One Toyota Prius converter jumped from $2,466 to $3,038 in just ten months. Experts point to trade wars and supply constraints as key drivers. As converter values rise, so do junk car prices.
+The price of catalytic converters has climbed. Trade wars and supply constraints are often cited as key drivers. As converter values rise, so do junk car prices.
 
 ## EV Batteries: The New Gold Mine
 
@@ -93,4 +93,4 @@ Heavier vehicles command higher baseline prices. A large truck might weigh 5,000
 
 ### Condition Counts
 
-A running engine or transmission can double or triple your car’s value. Buyers will pay more to part out a working vehicle rather than crush it. If your car was totaled due to body damage but still runs, you’re in a good position.
+A running engine or transmission can raise your car’s value considerably. Buyers will pay more to part out a working vehicle rather than crush it. If your car was totaled due to body damage but still runs, you’re in a good position.

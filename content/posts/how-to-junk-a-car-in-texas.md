@@ -67,7 +67,7 @@ Flood- and fire-damaged vehicles frequently start exhibiting serious “invisibl
 
 So, in these kinds of situations, **junk vehicle disposal** is the viable and economical option.
 
-> *Quick Tip:* Before deciding to junk your vehicle, compare the estimated repair costs with its current market value. If the repairs require an investment that exceeds its value, proceeding with the junking process is usually still mathematically favourable.
+> *Quick Tip:* Before deciding to junk your vehicle, compare the estimated repair costs with its current market value. If the repairs require an investment that exceeds its value, proceeding with the junking process usually makes more financial sense.
 
 ## What You Need Before Starting the Texas Junk Car Process
 
@@ -120,7 +120,7 @@ By ensuring the process is done correctly now, you can avoid trouble with regist
 
 ## How to Sell a Junk Car Without Unexpected Problems
 
-Once you have all your paperwork lined up, the next thing is reaching out to buyers. The action here is stated simply, but the data that you provide back can have a direct effect on the quotes and prices you will receive. Unlike a regular automobile, where heart and jocular assurances can always be given on what a buyer may discover when they arrive (talking your process once more on price), flatbed lorries need the client to understand as well as an honest opinion regarding what he/she needs to expect with regard to the condition of the auto.
+Once you have all your paperwork lined up, the next thing is reaching out to buyers. The step itself is simple, but the information you give buyers has a direct effect on the quotes you receive. An honest description of the car’s condition up front helps the buyer know what to expect and avoids surprises when the tow truck arrives.
 
 ### Describe Your Vehicle Accurately
 

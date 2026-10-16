@@ -1,22 +1,22 @@
 ---
 slug: "sell-flood-damaged-car-houston"
-title: "Sell Your Flood Damaged Car Fast: Get Cash Today in Houston"
-description: "Sell your flood damaged car in Houston fast. Get cash today, free towing, quick pickup, and a fair offer for your flooded vehicle."
+title: "Sell Your Flood Damaged Car Fast: Get Cash in Houston"
+description: "Sell your flood damaged car in Houston fast. Free towing, pickup often within 2 to 4 hours, and you are paid on the spot, before the car is towed."
 published: "2026-04-07"
 updated: "2026-06-10"
 answer: "After a flood you can file an insurance claim, try a private sale or trade-in, or sell directly to a damaged car buyer who prices the car on salvage, parts and scrap value. Selling quickly matters because mold can start within 48 hours and corrosion worsens over time."
 category: "flood"
 faq:
   - q: "Will you buy my car if insurance already totaled it?"
-    a: "Yes. We purchase insurance-totaled vehicles regularly. Bring your settlement paperwork and salvage title. We factor the documented damage into our offer and handle all salvage title processing requirements."
+    a: "Yes. We buy insurance-totaled vehicles. Have your settlement paperwork and salvage title ready. Mark factors the documented damage into the offer, which he makes himself after a quick look at the car, and we walk you through the paperwork."
   - q: "What if I lost my title in the flood?"
-    a: "We buy vehicles without title when you can prove ownership through registration and ID. Our team guides you through Texas bonded title procedures if needed. Never let missing paperwork stop you from getting cash."
+    a: "If the car is titled in your name, a certified copy of the title (Form VTR-34) from TxDMV is usually the simplest fix. Texas also has a specific no-title route for vehicles at least 13 years old that have not been registered for at least seven years, sold to a licensed recycler, and a bonded title is an option in other cases. Registration and ID alone do not replace a title. Call us with the VIN and we will tell you what we would need."
   - q: "How quickly can you pick up my flooded car?"
-    a: "Most Houston metro pickups happen same day or within 24 hours. During widespread flooding events, we add extra drivers to maintain same-day pickup & payment standards. Call early for fastest service."
+    a: "Pickup is often within 2 to 4 hours of your call, though widespread flooding can stretch that. Call early for fastest service. You are paid on the spot, before the car is towed."
   - q: "Do I need to drain fluids or clean the car first?"
-    a: "Absolutely not. Sell your flood damaged car exactly as it sits. Water in the engine? Mold on the seats? We handle it. Our junk car removal includes proper fluid disposal and environmental compliance."
+    a: "Absolutely not. Sell your flood damaged car exactly as it sits. Water in the engine? Mold on the seats? We handle it."
   - q: "What if my car floated away and was recovered elsewhere?"
-    a: "Contact police unclaimed auto departments first to locate your vehicle. Once recovered, we can assess it regardless of where floodwaters deposited it. We have retrieved cars from retention ponds, parking garages, and even neighboring counties."
+    a: "Contact police unclaimed auto departments first to locate your vehicle. Once recovered, we can take a look at it wherever it ended up, and towing is free anywhere in Houston."
 ---
 You wake up to find your driveway underwater. Your car sat through the night while flash floods turned your street into a river. The water reached the floorboards, maybe higher. Your heart sinks because you know what comes next, mold, electrical failures, and repair bills that could total more than the car is worth.
 
@@ -68,14 +68,14 @@ This matters especially when you lack full coverage. Liability-only policies lea
 
 Not every car buying service understands flood damage. Some quote high over the phone, then lowball when they see water stains. Others charge hidden fees for towing or paperwork.
 
-**I Buy Vehicles** operates differently. We built our reputation on same-day pickup & payment for flooded Houston vehicles. Our team arrives with cash, not checks that clear next week. We handle title transfer assistance even when your paperwork got soaked or you never had the title to begin with.
+**I Buy Vehicles** operates differently. Mark makes the offer himself after a quick look at the car, and he asks about anything that changes the price (like a missing catalytic converter) before he gives you a number, not at the curb. You never have to sell. Pickup is often within 2 to 4 hours, and you are paid on the spot, before the car is towed. If your paperwork got soaked, we can tell you which TxDMV route fits your car.
 
-We specialize in non-running vehicle removal because flooded cars rarely start safely. Our scrap car valuation reflects current metal markets, not outdated price sheets. And because we process volume through local salvage networks, we pay more than individual junkyards.
+We buy non-running vehicles because flooded cars rarely start safely. Our scrap car valuation reflects current metal markets, not outdated price sheets.
 
 ## How Our Process Works
 
-You call or fill out our online form. We ask basic questions, year, make, model, water line height, current location. Within minutes, you get a real offer based on flood damage assessment protocols we have refined across thousands of Houston vehicles.
+You call (281) 840-0452 or get a free estimate at https://ibuyvehicles.com/offer. We ask basic questions, year, make, model, water line height, current location. The estimate is a starting range, not an offer; Mark makes the offer himself after a quick look at the car.
 
-Accept the offer and we schedule tow pickup service for today or tomorrow. Our driver arrives with cash and paperwork. You sign the title, we hand you payment, and we haul the car away. No waiting for bank transfers. No surprise deductions. No stress about where to store a flooded vehicle.
+Accept the offer and we schedule free towing, often within 2 to 4 hours. You sign the title, you are paid on the spot, and then we haul the car away. No surprise deductions. No stress about where to store a flooded vehicle.
 
 Flood damage often reduces a vehicle’s usability, but it does not eliminate its value entirely. Choosing to **sell flood damaged car Houston** allows owners to recover cash while avoiding repair costs that may exceed the vehicle’s worth. Even heavily damaged cars can still be evaluated for parts and salvage value. Quick evaluation ensures a smooth and stress-free selling experience.

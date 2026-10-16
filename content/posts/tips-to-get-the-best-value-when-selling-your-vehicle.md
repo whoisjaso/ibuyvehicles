@@ -14,7 +14,7 @@ faq:
   - q: "When is the best time to sell a vehicle?"
     a: "If possible, sell during times when demand is high, for example before holiday seasons or when fuel-efficient cars are trending."
 ---
-Even though **I Buy Vehicle** makes the selling process quick and easy, a little preparation on your end can help you secure the **best value** for your vehicle. Here are some expert tips:
+Even though **I Buy Vehicles** makes the selling process quick and easy, a little preparation on your end can help you secure the **best value** for your vehicle. Here are some expert tips:
 
 ## 1. Give Your Vehicle a Quick Clean
 
@@ -26,11 +26,11 @@ Have your registration, service history, insurance papers, and ID ready. This sp
 
 ## 3. Be Honest About Condition
 
-Whether your vehicle has dents, scratches, or engine issues, being upfront ensures a smooth deal. At **I Buy Vehicle**, we’re fair and transparent, and honesty helps us give you the best offer.
+Whether your vehicle has dents, scratches, or engine issues, being upfront ensures a smooth deal. At **I Buy Vehicles**, we’re fair and transparent, and honesty helps us give you the best offer.
 
 ## 4. Know Your Vehicle’s Value
 
-Understand your car’s approximate market value. This way, you’ll know you’re getting a good deal. The good news? We do this work for you by giving **instant, fair offers**.
+Understand your car’s approximate market value. This way, you’ll know you’re getting a good deal. The good news? We do this work for you. You get a free starting estimate at https://ibuyvehicles.com/offer, and Mark makes the **fair offer** himself after a quick look at the vehicle. You never have to sell.
 
 ## 5. Sell at the Right Time
 
@@ -38,6 +38,6 @@ If possible, try selling during times when demand is high (e.g., before holiday 
 
 ## Final Thoughts
 
-Selling a vehicle doesn’t have to be complicated or stressful. At **I Buy Vehicle**, we combine speed, fairness, and transparency to ensure you walk away happy, and with cash in hand.
+Selling a vehicle doesn’t have to be complicated or stressful. At **I Buy Vehicles**, we combine speed, fairness, and transparency to ensure you walk away happy, paid on the spot, before the car is towed.
 
-Whether it’s a car, motorcycle, van, or truck, we’re ready to buy it today.
+Whether it’s a car, motorcycle, van, or truck, we’re ready to make an offer.

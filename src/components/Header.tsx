@@ -13,7 +13,9 @@ const links = [
   { href: "/#evening", label: "How It Works", note: "From your message to cash in hand" },
   { href: "/vehicles-without-title", label: "No Title", note: "Still sellable" },
   { href: "/dealers", label: "Dealers", note: "Aged units, one call" },
+  { href: "/blogs", label: "Articles", note: "Titles, paperwork, what it's worth" },
   { href: "/about", label: "About Mark", note: `Buying cars in Houston since ${business.since}` },
+  { href: "/contact-us", label: "Contact", note: "Call, text or visit the lot" },
 ];
 
 /** Porsche grammar: menu left, mark centred, the call right. Transparent over the hero, white after. */

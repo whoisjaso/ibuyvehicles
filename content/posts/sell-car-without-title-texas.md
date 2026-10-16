@@ -72,7 +72,7 @@ If it did not pass to the buyer from the previous owner, a lien will remain on t
 
 ## What About Junk Cars Without a Title?
 
-It is also possible to sell a junk car without a title, as long as you can provide proof of legal right to sell the car. The requirements for a junk or damaged car can vary according to its title classification. Nonrepairable and salvage vehicles also have guidelines; be sure not to think that using the same one as for a used car is the same process for every damaged vehicle.
+It may be possible to sell a junk car without a title in some cases. Texas has a specific no-title route for vehicles that are at least 13 years old and have not been registered for at least seven years, when a licensed Used Auto Parts Recycler buys them for dismantling or scrap. Other vehicles generally need acceptable ownership evidence. The requirements for a junk or damaged car can also vary according to its title classification. Nonrepairable and salvage vehicles have their own guidelines, so don’t assume the process for a used car is the same for every damaged vehicle.
 
 If you are selling a vehicle for parts or scrap, be sure to advise the buyer that the title is not included. A trusted buyer will be able to tell you which documents are appropriate for that vehicle.
 

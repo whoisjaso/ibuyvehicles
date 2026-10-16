@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { FacebookLogo, XLogo } from "@phosphor-icons/react/dist/ssr";
 import { Wordmark } from "./Emblem";
+import { SocialLinks } from "./SocialLinks";
 import { business, telHref } from "@/data/business";
 import { services, areas } from "@/data/services";
 
@@ -12,14 +12,10 @@ export function Footer() {
           <div>
             <Wordmark inverse />
             <p className="mt-6 max-w-[34ch] text-on-night-2">Houston&apos;s cash car buyer since {business.since}. Free towing, paid at pickup.</p>
-            <div className="mt-6 flex gap-2">
-              <a href={business.social.facebook} target="_blank" rel="noopener" aria-label="Facebook" className="grid size-11 place-items-center rounded-full bg-night-2 transition-colors hover:bg-white hover:text-ink">
-                <FacebookLogo size={18} />
-              </a>
-              <a href={business.social.x} target="_blank" rel="noopener" aria-label="X" className="grid size-11 place-items-center rounded-full bg-night-2 transition-colors hover:bg-white hover:text-ink">
-                <XLogo size={18} />
-              </a>
-            </div>
+            <SocialLinks className="mt-6" />
+            <a href={business.reviewUrl} target="_blank" rel="noopener" className="mt-4 inline-block text-[15px] text-on-night-2 underline underline-offset-4 hover:text-white">
+              Sold to Mark? Leave a Google review
+            </a>
           </div>
           <Col title="What We Buy" links={[...services.map((s) => ({ href: `/${s.slug}`, label: s.title })), { href: "/dealers", label: "Dealers" }, { href: "/services", label: "All Services" }]} />
           <Col title="Free Pickup In" links={[...areas.map((a) => ({ href: `/${a.slug}`, label: a.name })), { href: "/service-areas", label: "All Areas" }]} />
@@ -50,6 +46,11 @@ export function Footer() {
               <li>
                 <Link href="/contact-us" className="text-on-night-2 hover:text-white">
                   Contact And Directions
+                </Link>
+              </li>
+              <li>
+                <Link href="/blogs" className="text-on-night-2 hover:text-white">
+                  Articles
                 </Link>
               </li>
             </ul>

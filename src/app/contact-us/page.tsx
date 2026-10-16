@@ -5,6 +5,7 @@ import { Footer } from "@/components/Footer";
 import { OpenNow } from "@/components/OpenNow";
 import { TalkToMarkButton } from "@/components/TalkToMarkButton";
 import { JsonLd } from "@/components/JsonLd";
+import { SocialLinks } from "@/components/SocialLinks";
 import { business, mapsHref, smsHref, telHref } from "@/data/business";
 import { BUSINESS_ID, breadcrumbs, graph } from "@/lib/schema";
 
@@ -71,7 +72,11 @@ export default function Contact() {
                   <dd className="mt-1.5 text-[1.2rem]">{business.hours.label}</dd>
                 </div>
               </dl>
-              <p className="mt-10 text-ink-2">
+              <div className="mt-10 flex items-center gap-4">
+                <SocialLinks tone="paper" />
+                <span className="text-[15px] text-ink-3">Google, Facebook and X</span>
+              </div>
+              <p className="mt-8 text-ink-2">
                 Rather see a number first?{" "}
                 <Link href="/offer" className="font-semibold text-ink underline underline-offset-4">
                   Get an estimate in about a minute

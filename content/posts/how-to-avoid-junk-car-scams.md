@@ -45,7 +45,7 @@ A written offer gives you something to compare with other buyers and makes vague
 
 This is one of the most annoying **junk car scams** that can be with the initial offer appearing to be a great deal.
 
-The buyer may give the salesperson $2,500 and then say that the car is worth a lot less once they get to the dealership. They might suddenly indicate damage, missing parts, or mechanical issues that were already reported.
+The buyer may quote you $2,500 over the phone and then say that the car is worth a lot less once the tow truck arrives. They might suddenly indicate damage, missing parts, or mechanical issues that were already reported.
 
 ### How to Protect Yourself
 
@@ -106,7 +106,7 @@ A payment notification alone does not necessarily mean funds are available.
 
 ## 6. The Business Has No Verifiable Identity
 
-A good businessman should normally provide some means for the identification of the customer.
+A legitimate business should be easy for the customer to identify.
 
 Be cautious when a buyer:
 

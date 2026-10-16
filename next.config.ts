@@ -15,11 +15,9 @@ const nextConfig: NextConfig = {
     return [
       { source: "/sell-now", destination: "/offer", permanent: true },
       { source: "/about-us", destination: "/about", permanent: true },
-      { source: "/portfolio", destination: "/#real", permanent: true },
-      { source: "/blogs", destination: "/", permanent: false },
-      { source: "/how-to-junk-a-car-in-texas", destination: "/vehicles-without-title", permanent: false },
-      { source: "/junk-cars-free-towing-houston", destination: "/free-towing-service", permanent: false },
-      { source: "/junk-car-towing-houston", destination: "/free-towing-service", permanent: false },
+      { source: "/portfolio", destination: "/about", permanent: true },
+      { source: "/sell-flood-damaged-car-houston-2", destination: "/sell-flood-damaged-car-houston", permanent: true },
+      { source: "/blog", destination: "/blogs", permanent: true },
     ];
   },
 };

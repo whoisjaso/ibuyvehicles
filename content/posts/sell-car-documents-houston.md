@@ -8,11 +8,11 @@ answer: "The vehicle title is the most important document, along with a lien rel
 category: "guides"
 faq:
   - q: "What documents do I need to sell my car in Houston?"
-    a: "You need the vehicle title, a valid ID, and a completed odometer disclosure. A bill of sale is also recommended. If you have a lien, you need a release letter. Buyers like I Buy Vehicles can help if you are missing some documents."
+    a: "You need the vehicle title, a valid ID, and a completed odometer disclosure. A bill of sale is also recommended. If you have a lien, you need a release letter. Buyers like I Buy Vehicles can tell you what to do if you are missing some documents."
   - q: "How do I transfer a car title in Texas?"
     a: "The seller signs the title. The buyer takes the signed title to a county tax office. The buyer must complete the transfer within 30 days. The seller should submit a vehicle transfer notification online."
   - q: "Can I sell a car without a title in Houston?"
-    a: "Yes, some buyers accept cars without a title. I Buy Vehicles can buy your car with proof of ownership and a valid ID. They handle the paperwork to make it legal."
+    a: "It depends on the vehicle. If the car is titled to you, the simplest fix is a certified copy of the title (Form VTR-34). Texas also has a specific no-title route for vehicles at least 13 years old that have not been registered for at least seven years, when a licensed Used Auto Parts Recycler buys them for dismantling or scrap. Other cases may need a bonded title. Call I Buy Vehicles with the VIN and we will tell you what we would need."
   - q: "What is a vehicle transfer notification?"
     a: "It is a Texas DMV requirement. Sellers must notify the DMV within 30 days of a sale. This releases you from liability. You can do it online through the Texas DMV website."
 ---
@@ -26,9 +26,9 @@ Texas titles are issued by the Department of Motor Vehicles (DMV). They are pink
 
 ## What If You Lost Your Car Title?
 
-Losing your title is stressful. But it is not the end. You can still sell your car. In Texas, you can apply for a duplicate title online or in person. The Texas DMV handles this process. It takes a few weeks.
+Losing your title is stressful. But it is not the end. You can still sell your car. In Texas, the recorded owner can request a certified copy of the title with Form VTR-34, in person at a TxDMV Regional Service Center or by mail. TxDMV says to allow at least 15 days for a mailed copy.
 
-However, some buyers make it easier. **I Buy Vehicles** in Houston can work with you if you lost your title. They just need proof of ownership. A valid ID and registration may be enough. This saves you time and stress.
+**I Buy Vehicles** in Houston can talk you through it if you lost your title. Texas has a specific no-title route for vehicles at least 13 years old that have not been registered for at least seven years, sold to a licensed Used Auto Parts Recycler. For other cars, registration and ID alone do not replace a title, so a certified copy is usually the first step.
 
 ## What Is a Bill of Sale in Texas?
 
@@ -46,7 +46,7 @@ This document is essential for tax purposes. It also helps if there are future d
 
 ## What Is the Odometer Disclosure Statement?
 
-Federal law requires an odometer disclosure for all cars under 20 years old. This form records the vehicle’s exact mileage at the time of sale. It prevents odometer fraud. The seller must sign it. The buyer receives a copy.
+Federal law requires an odometer disclosure for most vehicles, though some older vehicles are exempt. Check with TxDMV if you are unsure whether yours is. This form records the vehicle’s exact mileage at the time of sale. It prevents odometer fraud. The seller must sign it. The buyer receives a copy.
 
 The odometer statement is on the back of the Texas title. You fill it out during the transfer. Be accurate. The buyer could check the mileage against service records. Incorrect information can lead to legal trouble.
 
@@ -62,9 +62,9 @@ The seller signs the title. The buyer takes the signed title to a county tax off
 
 Texas law requires sellers to notify the DMV within 30 days. You can do this online. This step releases you from liability. If the buyer gets a ticket, you will not be responsible.
 
-### Provide a Valid Vehicle Inspection
+### Check Emissions Inspection Rules
 
-Texas requires annual safety inspections. The car must pass inspection within 90 days of sale. The buyer needs this to register the car. Some exceptions apply for new cars.
+Texas ended annual safety inspections for most non-commercial passenger vehicles on January 1, 2025. Emissions testing continues in some counties, including Harris County, so a Houston buyer may need a passing emissions test to register the car. Check with TxDMV or the Harris County tax office for current requirements.
 
 ### Register the Car
 
@@ -81,13 +81,13 @@ VIN verification is important for several reasons:
 - It helps uncover title washing or odometer fraud.
 - It is required for out-of-state vehicle registration.
 
-**I Buy Vehicles** verifies the VIN during their inspection. This confirms the car’s identity and helps them make a fair offer.
+**I Buy Vehicles** verifies the VIN when Mark takes a quick look at the car. This confirms the car’s identity and helps them make a fair offer.
 
 ## How Does a Lien Release Work?
 
 A lien release is a document from a lender. It confirms you have paid off your car loan. The lender no longer has a claim on the vehicle. This allows you to transfer the title to a new owner.
 
-If you still owe money, the process is different. You may need to pay off the loan before selling. The buyer could pay the lender directly. In that case, the lender will send the title to the buyer. **I Buy Vehicles** can help you navigate this. They handle many cars with active liens.
+If you still owe money, the process is different. You may need to pay off the loan before selling. The buyer could pay the lender directly. In that case, the lender will send the title to the buyer. **I Buy Vehicles** can talk you through how a payoff would work.
 
 ## What Vehicle History Report Do Sellers Need?
 
@@ -112,30 +112,30 @@ After the sale, contact your insurance company. Tell them the date of sale. They
 
 ## How Does I Buy Vehicles Simplify Car Sales?
 
-**I Buy Vehicles** makes selling your car easy. They are a trusted Houston buyer. They have been serving the community since 2010. Their process is straightforward.
+**I Buy Vehicles** makes selling your car easy. They are a trusted Houston buyer. They have been buying cars in Houston since 2010. Their process is straightforward.
 
-### They Handle the Paperwork
+### They Walk You Through the Paperwork
 
-Paperwork is their specialty. They handle everything for you. This includes the title transfer, bill of sale, and DMV forms. You do not need to visit the tax office. They make sure everything is legal and compliant.
+They walk you through the title, bill of sale, and DMV forms, and tell you up front what your car needs. You should still file your Vehicle Transfer Notification within 30 days.
 
-### They Accept Vehicles Without Titles
+### They Talk Through Missing Titles
 
-Lost your title? No problem. **I Buy Vehicles** can still buy your car. They just need proof of ownership and a valid ID. This saves you weeks of waiting for a duplicate title.
+Lost your title? Call **I Buy Vehicles** with the VIN. They will tell you whether your car fits the Texas no-title route for older vehicles or whether a certified copy of the title comes first.
 
-### They Provide Same-Day Payment
+### You Are Paid on the Spot
 
-You get paid instantly. After they inspect your car, they make a fair cash offer. You get cash on the spot. No waiting for bank transfers or checks.
+Mark makes the offer himself after a quick look at the car, and he asks about anything that changes the price (like a missing catalytic converter) before he gives you a number, not at the curb. You never have to sell. If you accept, you are paid on the spot, before the car is towed.
 
 ### They Offer Free Towing
 
-Your car does not need to run. They will tow it away for free. This is perfect for junk cars or non-running vehicles. There are no hidden fees.
+Your car does not need to run. They will tow it away for free anywhere in Houston. This is perfect for junk cars or non-running vehicles. There are no hidden fees.
 
 ### They Are Houston’s Trusted Car Buyers
 
-With over 10 years of experience, they know the local market. They offer fair prices based on the car’s condition and demand. Customer reviews praise their transparency and professionalism.
+Buying cars in Houston since 2010, they know the local market. They offer fair prices based on the car’s condition and demand, and they have 252 Google reviews.
 
 ## Sell Your Car Fast in Houston with I Buy Vehicles
 
-Selling your car does not need to be hard. The right sell car documents Houston sellers need are easy to gather. But if you are missing any, **I Buy Vehicles** can still help. They buy cars in any condition. They handle the title transfer and all paperwork. You get paid cash on the spot. They offer free towing and same-day payment.
+Selling your car does not need to be hard. The right sell car documents Houston sellers need are easy to gather. But if you are missing any, **I Buy Vehicles** can still help. They buy cars in any condition and walk you through the paperwork. You get paid on the spot, before the car is towed, and towing is free.
 
-Ready to sell your car? Contact **I Buy Vehicles** today. Get a quick offer and cash for your car. Join thousands of satisfied Houston sellers.
+Ready to sell your car? Call **I Buy Vehicles** at (281) 840-0452 or get a free estimate at https://ibuyvehicles.com/offer.

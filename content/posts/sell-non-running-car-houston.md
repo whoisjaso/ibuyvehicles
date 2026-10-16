@@ -1,26 +1,26 @@
 ---
 slug: "sell-non-running-car-houston"
 title: "Sell Your Non-Running Car: We Buy Cars That Don't Run"
-description: "Sell your non-running car in Houston for instant cash. Free towing, fast pickup, and fair offers for junk, damaged, or broken vehicles."
+description: "Sell your non-running car in Houston. Free towing, fast pickup, fair offers for junk, damaged, or broken vehicles, and you are paid on the spot."
 published: "2026-04-22"
 updated: "2026-06-09"
-answer: "Share the car's year, make, model and issues, get a free cash quote, pick a pickup time, and the car is towed free with payment at pickup. The offer depends on the car's metal weight, reusable parts and current metal rates."
+answer: "Share the car's year, make, model and issues, get a free estimate, pick a pickup time, and Mark makes the offer himself after a quick look at the car. Towing is free and you are paid on the spot, before the car is towed. The offer depends on the car's metal weight, reusable parts and current metal rates."
 category: "selling"
 faq:
   - q: "Can I sell a car that doesn’t run without a title?"
-    a: "Yes, we buy cars without titles. Use a quick affidavit, and our team wraps it up. Cash for non-running cars comes fast."
+    a: "It depends on the car. If it is titled in your name, a certified copy of the title (Form VTR-34) is usually the simplest fix. Texas also has a specific no-title route for vehicles at least 13 years old that have not been registered for at least seven years, sold to a licensed recycler. Call us with the VIN and we will tell you what we would need."
   - q: "How much do you pay for a non-running car?"
-    a: "From $200 to $2,000, based on weight, parts, and model. We use real scrap car value for honest quotes."
+    a: "It depends on weight, parts, and model. Start with a free estimate at https://ibuyvehicles.com/offer; it is a starting range, not an offer. Mark makes the final offer himself after a quick look at the car, and you never have to sell."
   - q: "Do you offer free towing for junk cars?"
-    a: "Yes, towing stays free everywhere in Houston. Same-day non-running vehicle removal standard."
+    a: "Yes, towing is free anywhere in Houston. Pickup is often within 2 to 4 hours."
   - q: "What if my car has flood damage?"
-    a: "We buy flood-damaged cars no questions. Sell broken car water woes for instant cash."
+    a: "Yes, we buy flood-damaged cars. Mark makes the offer himself after a quick look at the car."
   - q: "How soon can I get paid?"
-    a: "Paid same-day at pickup. Tow your dead car, grab cash, done."
+    a: "You are paid on the spot, before the car is towed."
 ---
 Got a car that won’t start? It sits in your driveway, gathering dust and killing your curb appeal. You know you need to get rid of it, but who wants to deal with the hassle? Traditional buyers pass on broken vehicles. That’s where we step in at I Buy Vehicles. We buy non-running cars in Houston, TX, and make the process dead simple.
 
-Think about the stress. Calling repair shops leads to sky-high quotes. Listing it online draws flakes and lowballs. You deserve cash for non-running cars without the headache. Our **I Buy Vehicle team** handles everything, from free towing to same-day payment. Let’s explore why this beats every other path.
+Think about the stress. Calling repair shops leads to sky-high quotes. Listing it online draws flakes and lowballs. You deserve cash for non-running cars without the headache. Our **I Buy Vehicles team** handles everything, from free towing to paying you on the spot. Let’s explore why this beats every other path.
 
 ## Why Selling a Non-Running Car Is Hard for Private Sellers
 
@@ -42,22 +42,22 @@ These issues tank resale chances. Private buyers bolt at test drive fails. Banks
 
 ## How Much Cash Can You Get for a Broken Car?
 
-Cash amounts tie to your ride’s details. We weigh metal content for scrap car value. Check parts like doors or wheels for reuse. A rusty 2005 Chevy Silverado with engine trouble might pull $400 to $1,000. SUVs or trucks often top sedans.
+Cash amounts tie to your ride’s details. We weigh metal content for scrap car value. Check parts like doors or wheels for reuse. SUVs or trucks often top sedans.
 
-Houston’s busy auto salvage yards keep prices steady. Metal rates fluctuate, but we stay current. Add in recyclable bits like catalytic converters. No lowball tricks, quotes hit your phone fast. Sell broken car smart, not sorry.
+Houston’s busy auto salvage yards keep prices steady. Metal rates fluctuate, but we stay current. Add in recyclable bits like catalytic converters. Mark makes the offer himself after a quick look at the car, and he asks about anything that changes the price (like a missing catalytic converter) before he gives you a number, not at the curb. Sell broken car smart, not sorry.
 
-Location plays a role too. Inner-loop spots fetch more than outskirts. We buy them if you want to **sell non-running cars** citywide. Curious about yours? One call reveals the number.
+We buy them if you want to **sell non-running cars** citywide. Curious about yours? One call reveals the number.
 
 ### The Easiest Way to Sell a Car That Doesn’t Run
 
-Our process shines for junk car removal. Dial I Buy Vehicles for instant help. We buy non-running cars with zero fuss. Skip DMV lines and buyer games.
+Our process shines for junk car removal. Dial I Buy Vehicles for instant help. We buy non-running cars with zero fuss. Skip the buyer games.
 
 Steps keep it smooth:
 
 - Share year, make, model, and issues.
-- Hear your free cash quote right away.
+- Get a free estimate, then Mark makes the offer after a quick look.
 - Pick a pickup time that fits your day.
-- Watch us tow it free and pay cash.
+- Get paid on the spot, then watch us tow it free.
 
 ### We Buy Non-Running Cars in Any Condition
 
@@ -67,21 +67,21 @@ We do not care if the car has been sitting for five years or five days. Our goal
 
 ### Handling Titles and Odd Cases
 
-Titles vanish in moves or fires. Texas law allows seller affidavits. We guide you through it. Sell car with blown engine even if papers lack. Dead battery or seized motor? Cash flows either way.
+Titles vanish in moves or fires. If the car is titled to you, a certified copy of the title from TxDMV is usually the fix. Older junk cars that have not been registered for years may qualify for the Texas no-title route through a licensed recycler. We tell you which applies. Dead battery or seized motor? Cash flows either way.
 
 ## Benefits of Choosing I Buy Vehicles for Junk Car Removal
 
-Houston drivers pick us for speed and trust. Free vehicle towing dodges your $150 bill. No fees surprise you at pickup. We lead in non-running vehicle removal. Clear unwanted cars from yards pronto. Neighbors quit griping about eyesores. Dodge fines for property junk. **Cash for junk cars** hits same-day, topping slow auctions.
+Houston drivers pick us for speed and trust. Free vehicle towing saves you a tow bill. No fees surprise you at pickup. Clear unwanted cars from yards pronto. Neighbors quit griping about eyesores. Dodge fines for property junk. With **cash for junk cars**, you are paid on the spot, faster than slow auctions.
 
-Post-flood, we snag waterlogged rides. Damaged and wrecked cars from wrecks? Daily buys. Years in auto salvage teach us true worth. Sell a damaged car to experts who pay right.
+Post-flood, we snag waterlogged rides. Damaged and wrecked cars? We buy those too. Buying cars in Houston since 2010 taught us true worth.
 
-Safety matters too. Our insured team lifts heavy hulks safe. No yard scratches or neighbor spats.
+Safety matters too. Our team loads heavy hulks with care.
 
 ### Sell Car with Blown Engine or Total Loss Today
 
-Engine blowouts hit hard. Smoke pours out, stranding you. Fixes run $3,000 plus. Sell car that doesn’t run to us for relief. We buy dead cars as-is.
+Engine blowouts hit hard. Smoke pours out, stranding you. Fixes can cost more than the car is worth. Sell car that doesn’t run to us for relief. We buy dead cars as-is.
 
-Houston roads punish rides. Potholes crack blocks. Heat swells seals. Your old Toyota’s motor quits, we offer $600 and free haul. Real stories from locals prove it.
+Houston roads punish rides. Potholes crack blocks. Heat swells seals. Your old Toyota’s motor quits? We make an offer and haul it free.
 
 We cover all areas in Houston: No drive required. Cash for non-running cars turns trash to treasure.
 
@@ -89,10 +89,10 @@ We cover all areas in Houston: No drive required. Cash for non-running cars turn
 
 Myth one: Damaged cars equal zero cash. Sell a damaged car for parts value instead. Myth two: Must run to sell. We buy cars that don’t run, proven daily.
 
-Towing always costs? Ours stays free. Quotes change last minute? Ours lock in. Sell broken car doubts fade with our track record. Car disposal done right pays off big.
+Towing always costs? Ours stays free. Quotes change last minute? Mark asks about anything that changes the price before he gives you a number, not at the curb, and you never have to sell. Sell broken car doubts fade with our track record. Car disposal done right pays off big.
 
 ## Ready to Sell Your Non-Running Car?
 
-Stop staring at that eyesore. Contact **I Buy Vehicles**. Snag your free quote in 2 minutes. Book same-day free towing and walk away with cash. We buy non-running cars, no title? No issue. Junk car removal awaits in Houston. Act now!
+Stop staring at that eyesore. Call **I Buy Vehicles** at (281) 840-0452 or get a free estimate at https://ibuyvehicles.com/offer. Pickup is often within 2 to 4 hours, towing is free, and you are paid on the spot, before the car is towed. Missing title? Ask us what your car needs. Junk car removal awaits in Houston. Act now!
 
 Vehicles that no longer start or function can still hold significant value in the resale market. The option to **sell non running car Houston** helps owners turn non-operational vehicles into cash without repair expenses. These cars are often reused for parts or recycling purposes. Fast pickup services make the entire process efficient and hassle-free.

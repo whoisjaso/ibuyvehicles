@@ -165,7 +165,7 @@ Before you definitively answer the **junkyard vs scrap yard** question, remember
 
 ## Before You Choose, Ask These Important Questions
 
-Now you must have realised that each option has its own benefits. Take a moment to compare more than just the price. If ever, then right questions upfront will save you from unavoidable hold-ups or cuts.
+By now you can see that each option has its own benefits. Take a moment to compare more than just the price. Asking the right questions upfront can save you from avoidable hold-ups or price cuts.
 
 ### A Simple Checklist Before You Sell Your Car
 
@@ -173,7 +173,7 @@ Is vehicle pickup included?
 
 Are there any towing fees?
 
-Is the quote guaranteed, or could it change later?
+What could change the price, and will you tell me before you give me a number?
 
 Who handles the paperwork?
 

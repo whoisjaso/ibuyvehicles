@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
-import { breadcrumbs, faqPage, graph, serviceNode } from "@/lib/schema";
+import { articleNode, breadcrumbs, faqPage, graph, serviceNode } from "@/lib/schema";
+import { allPosts, getPost, related, CATEGORY_LABEL } from "@/lib/posts";
+import { Article } from "@/components/Article";
 import { notFound } from "next/navigation";
 import { Check, ArrowRight, Phone } from "@phosphor-icons/react/dist/ssr";
 import { Header } from "@/components/Header";
@@ -13,10 +15,10 @@ import { Finale } from "@/components/Finale";
 import { services, areas, faqs } from "@/data/services";
 import { business, telHref } from "@/data/business";
 
-/* Service and neighborhood pages share one template, at the old site's URLs. */
+/* Service pages, neighborhood pages and Mark's articles, all at the old site's URLs. */
 
 export function generateStaticParams() {
-  return [...services.map((s) => ({ slug: s.slug })), ...areas.map((a) => ({ slug: a.slug }))];
+  return [...services.map((s) => ({ slug: s.slug })), ...areas.map((a) => ({ slug: a.slug })), ...allPosts().map((p) => ({ slug: p.slug }))];
 }
 
 function resolve(slug: string) {
@@ -24,6 +26,8 @@ function resolve(slug: string) {
   if (s) return { kind: "service" as const, s };
   const a = areas.find((x) => x.slug === slug);
   if (a) return { kind: "area" as const, a };
+  const p = getPost(slug);
+  if (p) return { kind: "post" as const, p };
   return null;
 }
 
@@ -31,6 +35,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const r = resolve((await params).slug);
   if (!r) return {};
   const path = `/${(await params).slug}`;
+  if (r.kind === "post")
+    return {
+      title: r.p.title,
+      description: r.p.description,
+      alternates: { canonical: path },
+      openGraph: { type: "article", publishedTime: r.p.published, modifiedTime: r.p.updated ?? r.p.published, authors: [business.owner] },
+    };
   if (r.kind === "service") return { title: `${r.s.title} in Houston, TX`, description: r.s.lede, alternates: { canonical: path } };
   return {
     title: `Sell Your Car For Cash in ${r.a.name}, Houston`,
@@ -42,6 +53,26 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const r = resolve((await params).slug);
   if (!r) notFound();
+  if (r.kind === "post") {
+    const path = `/${r.p.slug}`;
+    return (
+      <>
+        <JsonLd
+          data={graph(
+            articleNode({ title: r.p.title, description: r.p.description, path, published: r.p.published, updated: r.p.updated }),
+            breadcrumbs([{ name: "Articles", path: "/blogs" }, { name: CATEGORY_LABEL[r.p.category], path: `/blogs#${r.p.category}` }, { name: r.p.title, path }]),
+            ...(r.p.faq.length ? [faqPage(r.p.faq, path)] : []),
+          )}
+        />
+        <Header solid />
+        <main>
+          <Article post={r.p} more={related(r.p)} />
+          <Finale />
+        </main>
+        <Footer />
+      </>
+    );
+  }
 
   const title = r.kind === "service" ? r.s.title : `Cash For Cars In ${r.a.name}.`;
   const lede =

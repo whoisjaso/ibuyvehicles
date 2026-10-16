@@ -48,7 +48,7 @@ export function ReviewWall() {
           </h2>
           <p className="lede mt-6">Word for word, the way they wrote them on Google. No title, no keys, sitting for years, done in an hour or two.</p>
           <a
-            href="https://search.google.com/local/reviews?placeid=ChIJT0W1v3jPQIYRx3B_QgKHv4M"
+            href={business.reviewsUrl}
             target="_blank"
             rel="noopener"
             className="btn btn-outline mt-9"

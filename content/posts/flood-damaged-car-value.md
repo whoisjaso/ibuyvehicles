@@ -12,7 +12,7 @@ faq:
   - q: "Is a flood damaged car always a total loss?"
     a: "Almost always. Insurance companies use a formula comparing repair costs to the car’s actual cash value. The water damage to electronics, engines, and interiors usually pushes repair costs over the total loss threshold."
   - q: "Can I sell a flood damaged car without a title?"
-    a: "Yes, some buyers can work with you if you have proof of ownership and a valid ID. Companies like I Buy Vehicles can often buy cars with lost titles. The process is still legal and straightforward."
+    a: "Sometimes. If the car is titled in your name and the title is lost, the simplest fix is a certified copy of the title (Form VTR-34). Texas also has a specific no-title route for older vehicles that have not been registered for years and are sold to a licensed recycler. Other cases may need a bonded title. Check with TxDMV, or call I Buy Vehicles with the VIN and we will tell you what we would need."
   - q: "How can I check if a used car has flood damage?"
     a: "Pull a vehicle history report and check for salvage or flood branding. Physically inspect the car for musty odors, rust under the dash, foggy lights, and silt in strange places. Have a trusted mechanic perform a pre-purchase inspection."
 ---
@@ -118,7 +118,7 @@ Even then, be cautious. Flood damage tends to create long-term issues.
 
 ### Selling to a Car Removal Company
 
-Selling to a company that buys damaged cars is a simple option. Companies like **I Buy Vehicles** offer cash for flood-damaged cars. They handle free towing and paperwork. This removes the stress of finding a private buyer.
+Selling to a company that buys damaged cars is a simple option. Companies like **I Buy Vehicles** offer cash for flood-damaged cars. They handle free towing and walk you through the paperwork. This removes the stress of finding a private buyer.
 
 ## Selling Your Flood Damaged Car in Houston
 
@@ -126,16 +126,16 @@ If you live in Houston, you have local options. **I Buy Vehicles** is a trusted 
 
 ### What I Buy Vehicles Offers
 
-- **Fair Cash Offers:** They pay top dollar for vehicles in any condition.
+- **Fair Cash Offers:** Mark makes the offer himself after a quick look at the car, for vehicles in any condition.
 - **Free Towing:** They remove your car at no cost anywhere in Houston.
-- **Same-Day Payment:** You get paid instantly when they pick up your car.
-- **Hassle-Free Process:** They handle all the paperwork for you.
+- **Paid on the Spot:** You get paid on the spot, before the car is towed.
+- **Hassle-Free Process:** They walk you through the paperwork.
 - **Any Vehicle Accepted:** They buy cars, trucks, SUVs, and more.
 
 ### How It Works
 
-Selling your flood-damaged car is simple. Contact them by phone or through their website. Provide details about your car’s make, model, and condition. They will give you a firm offer. If you accept, they schedule a pickup. You get paid cash on the spot.
+Selling your flood-damaged car is simple. Contact them by phone or through their website. Provide details about your car’s make, model, and condition. The online estimate is a starting range, not an offer. Mark makes the offer himself after a quick look at the car, and he asks about anything that changes the price (like a missing catalytic converter) before he gives you a number, not at the curb. You never have to sell. If you accept, they schedule a pickup, often within 2 to 4 hours. You get paid on the spot, before the car is towed.
 
 ### Why Choose I Buy Vehicles
 
-They are a reputable Houston-based company with over a decade of experience. Customer reviews highlight their professionalism and fair deals. They make selling a flood-damaged car quick and easy.
+They are a Houston-based company that has been buying cars since 2010, with 252 Google reviews. Call (281) 840-0452 or get a free estimate at https://ibuyvehicles.com/offer. They make selling a flood-damaged car quick and easy.

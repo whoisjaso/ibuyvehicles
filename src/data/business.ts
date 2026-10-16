@@ -28,9 +28,14 @@ export const business = {
   social: {
     facebook: "https://www.facebook.com/Ibuyvehicleshouston/", // PUBLIC
     x: "https://x.com/ibuyvehicles", // PUBLIC
+    google: "https://www.google.com/maps?cid=9493454983295627463", // PUBLIC: Google Business Profile (old site's review widget)
   },
+  googlePlaceId: "ChIJT0W1v3jPQIYRx3B_QgKHv4M", // PUBLIC: old site's review widget
+  reviewUrl: "https://search.google.com/local/writereview?placeid=ChIJT0W1v3jPQIYRx3B_QgKHv4M",
+  reviewsUrl: "https://search.google.com/local/reviews?placeid=ChIJT0W1v3jPQIYRx3B_QgKHv4M",
   siteUrl: "https://ibuyvehicles.com",
   legalName: null as string | null, // ask Mark
+  signerFullName: null as string | null, // Mark's full legal name, as he signs a bill of sale; ask Mark
 } as const;
 
 export const yearsInBusiness = () => new Date().getFullYear() - business.since;
