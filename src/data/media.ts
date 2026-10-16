@@ -1,14 +1,17 @@
 /*
   Every image on the site is a named slot. The asset brief (docs/ASSET-BRIEF.md
   and the published brief page) uses the same codes. To place an image: drop
-  the file in public/photos/ with the slot's file name, set `src`, and adjust
-  `focus` so phones crop to the subject.
+  the file in public/photos/ named with the slot's code (A01.jpg,
+  B03-wrecked.png): scripts/sync-photos.mjs picks it up on the next build and
+  fills `src` below. Adjust `focus` so phones crop to the subject.
 
   kind "brand": a generated mood image (ChatGPT). Never presented as a
   specific car Mark bought, his lot, him, or a customer.
   kind "real": Mark's own photography. Interim: the low-resolution originals
   from the old site, shown in monochrome until the shoot arrives.
 */
+import placed from "./photos.generated.json";
+
 export type Slot = {
   code: string;
   src: string | null;
@@ -20,8 +23,8 @@ export type Slot = {
 };
 
 export const media = {
-  hero: { code: "A01", src: null, interim: "/photos/real-impala.webp", focus: "50% 62%", kind: "brand", alt: "A silver sedan alone in a dark photo studio under one soft overhead light", tone: "studio-night" },
-  heroMobile: { code: "A02", src: null, interim: "/photos/real-impala.webp", focus: "50% 62%", kind: "brand", alt: "A silver sedan alone in a dark photo studio", tone: "studio-night" },
+  hero: { code: "A01", src: null as string | null, interim: "/photos/real-impala.webp", focus: "66% 58%", kind: "brand", alt: "A silver sedan alone in a dark photo studio under one soft overhead light", tone: "studio-night" },
+  heroMobile: { code: "A02", src: null as string | null, interim: "/photos/real-impala.webp", focus: "50% 55%", kind: "brand", alt: "A silver sedan alone in a dark photo studio", tone: "studio-night" },
   wontStart: { code: "B01", src: null, interim: "/photos/real-tow.webp", focus: "50% 55%", kind: "brand", alt: "A sedan with its hood open in a white studio", tone: "studio" },
   noTitle: { code: "B02", src: null, focus: "50% 50%", kind: "brand", alt: "A car key resting on an empty document folder", tone: "studio" },
   wrecked: { code: "B03", src: null, interim: "/photos/real-jeep.webp", focus: "55% 55%", kind: "brand", alt: "A silver off-road SUV with a cracked windshield in a white studio", tone: "studio" },
@@ -36,5 +39,12 @@ export const media = {
   dealerBand: { code: "D02", src: null, focus: "50% 55%", kind: "brand", alt: "A quiet used-car lot at blue hour", tone: "studio-night" },
   finale: { code: "E01", src: null, focus: "50% 60%", kind: "brand", alt: "A white flatbed carrying a car down an empty Houston street at blue hour", tone: "studio-night" },
 } satisfies Record<string, Slot>;
+
+// Fill each slot from public/photos. The two hero crops stand in for each
+// other until both exist.
+const files = placed as Record<string, string>;
+for (const slot of Object.values(media) as Slot[]) slot.src ??= files[slot.code] ?? null;
+media.hero.src ??= files.A02 ?? null;
+media.heroMobile.src ??= files.A01 ?? null;
 
 export type SlotName = keyof typeof media;
