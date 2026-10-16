@@ -14,10 +14,7 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       { source: "/sell-now", destination: "/offer", permanent: true },
-      { source: "/contact-us", destination: "/#contact", permanent: true },
       { source: "/about-us", destination: "/about", permanent: true },
-      { source: "/services", destination: "/#situations", permanent: true },
-      { source: "/service-areas", destination: "/#areas", permanent: true },
       { source: "/portfolio", destination: "/#real", permanent: true },
       { source: "/blogs", destination: "/", permanent: false },
       { source: "/how-to-junk-a-car-in-texas", destination: "/vehicles-without-title", permanent: false },

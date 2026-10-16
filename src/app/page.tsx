@@ -12,10 +12,13 @@ import { Faq } from "@/components/Faq";
 import { Finale } from "@/components/Finale";
 import { Footer } from "@/components/Footer";
 import { faqs } from "@/data/services";
+import { JsonLd } from "@/components/JsonLd";
+import { faqPage, graph } from "@/lib/schema";
 
 export default function Home() {
   return (
     <>
+      <JsonLd data={graph(faqPage(faqs))} />
       <Header />
       <main>
         <Hero />

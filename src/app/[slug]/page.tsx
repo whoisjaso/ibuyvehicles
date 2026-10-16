@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { JsonLd } from "@/components/JsonLd";
+import { breadcrumbs, faqPage, graph, serviceNode } from "@/lib/schema";
 import { notFound } from "next/navigation";
 import { Check, ArrowRight, Phone } from "@phosphor-icons/react/dist/ssr";
 import { Header } from "@/components/Header";
@@ -28,10 +30,12 @@ function resolve(slug: string) {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const r = resolve((await params).slug);
   if (!r) return {};
-  if (r.kind === "service") return { title: `${r.s.title} in Houston, TX`, description: r.s.lede };
+  const path = `/${(await params).slug}`;
+  if (r.kind === "service") return { title: `${r.s.title} in Houston, TX`, description: r.s.lede, alternates: { canonical: path } };
   return {
     title: `Sell Your Car For Cash in ${r.a.name}, Houston`,
     description: `Cash for cars in ${r.a.name}. Running, junk, wrecked or no title. Free towing and paid at pickup.`,
+    alternates: { canonical: path },
   };
 }
 
@@ -48,8 +52,17 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   const qs = new URLSearchParams(Object.entries(r.kind === "service" ? r.s.preset : {}) as [string, string][]).toString();
   const href = `/offer${qs ? `?${qs}` : ""}`;
 
+  const path = r.kind === "service" ? `/${r.s.slug}` : `/${r.a.slug}`;
+  const faqItems = r.kind === "service" ? [...r.s.faq, ...faqs.slice(2, 4)] : faqs;
+  const ld = graph(
+    serviceNode({ name: r.kind === "service" ? `${r.s.title} in Houston` : `Cash for cars in ${r.a.name}`, description: lede, path, area: r.kind === "area" ? `${r.a.name}, Houston, TX` : undefined }),
+    breadcrumbs(r.kind === "service" ? [{ name: "Services", path: "/services" }, { name: r.s.title, path }] : [{ name: "Service Areas", path: "/service-areas" }, { name: r.a.name, path }]),
+    faqPage(faqItems, path),
+  );
+
   return (
     <>
+      <JsonLd data={ld} />
       <Header solid />
       <main>
         <section className="relative isolate overflow-hidden pb-20 pt-36 md:pt-44">
@@ -75,7 +88,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         </section>
         <Evening />
         <ReviewWall />
-        <Faq items={r.kind === "service" ? [...r.s.faq, ...faqs.slice(2, 4)] : faqs} />
+        <Faq items={faqItems} />
         <Finale />
       </main>
       <Footer />

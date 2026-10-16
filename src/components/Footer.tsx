@@ -21,8 +21,8 @@ export function Footer() {
               </a>
             </div>
           </div>
-          <Col title="What We Buy" links={[...services.map((s) => ({ href: `/${s.slug}`, label: s.title })), { href: "/dealers", label: "Dealers" }]} />
-          <Col title="Free Pickup In" links={areas.map((a) => ({ href: `/${a.slug}`, label: a.name }))} />
+          <Col title="What We Buy" links={[...services.map((s) => ({ href: `/${s.slug}`, label: s.title })), { href: "/dealers", label: "Dealers" }, { href: "/services", label: "All Services" }]} />
+          <Col title="Free Pickup In" links={[...areas.map((a) => ({ href: `/${a.slug}`, label: a.name })), { href: "/service-areas", label: "All Areas" }]} />
           <div>
             <p className="text-[15px] text-on-night-2">Contact</p>
             <ul className="mt-5 space-y-2.5">
@@ -45,6 +45,11 @@ export function Footer() {
               <li>
                 <Link href="/about" className="text-on-night-2 hover:text-white">
                   About {business.name}
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact-us" className="text-on-night-2 hover:text-white">
+                  Contact And Directions
                 </Link>
               </li>
             </ul>

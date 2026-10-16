@@ -1,0 +1,47 @@
+{
+  "source": "Scraped from every page and post on ibuyvehicles.com (header, footer, contact blocks, JSON-LD) on 2026-10-16",
+  "profiles": [
+    {
+      "network": "facebook",
+      "url": "https://www.facebook.com/Ibuyvehicleshouston/",
+      "found_on": "site header and footer (all pages)"
+    },
+    {
+      "network": "x",
+      "url": "https://x.com/ibuyvehicles",
+      "found_on": "site header and footer (all pages)"
+    },
+    {
+      "network": "google_business_profile",
+      "url": "https://www.google.com/maps?cid=9493454983295627463",
+      "found_on": "Trustindex Google reviews widget (services, service-areas, about-us, portfolio)"
+    },
+    {
+      "network": "google_write_review",
+      "url": "https://admin.trustindex.io/api/googleWriteReview?place-id=ChIJT0W1v3jPQIYRx3B_QgKHv4M",
+      "google_place_id": "ChIJT0W1v3jPQIYRx3B_QgKHv4M",
+      "found_on": "'Write a review' button in the Trustindex widget"
+    }
+  ],
+  "not_profiles": [
+    {
+      "label": "Google icon in header/footer social links",
+      "url": "https://www.google.com/search?q=%2B1+(281)+840-0452",
+      "note": "The old site's 'Google' social icon pointed to a Google search for the phone number, not a profile. Replace it with the Google Business Profile link above."
+    },
+    {
+      "label": "Embedded map",
+      "url": "https://maps.google.com/maps?q=8150%20W%20Little%20York%20Rd%2C%20Houston%2C%20TX%2077040",
+      "note": "Map embed by address on the contact block"
+    }
+  ],
+  "not_found": ["instagram", "youtube", "tiktok", "yelp", "bbb", "linkedin", "pinterest", "nextdoor"],
+  "contact": {
+    "phone": "+1 (281) 840-0452",
+    "phone_e164": "+12818400452",
+    "email": "mark@ibuyvehicles.com",
+    "address": "8150 W Little York Rd, Houston, TX 77040, United States",
+    "hours_contact_block": "Mon - Sun: 8 AM-10 PM",
+    "hours_footer": "Mon - Sat: 10:00am - 08:00pm"
+  }
+}
