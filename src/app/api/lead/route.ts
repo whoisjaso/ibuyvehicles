@@ -44,6 +44,7 @@ export async function POST(req: Request) {
       drive: clean(v.drive),
       damage: clean(v.damage),
       keys: clean(v.keys),
+      partsMissing: clean(v.parts),
     },
     estimate: { low: num(e.low), high: num(e.high), ai: e.ai === true },
     competingOffer: num(b.competingOffer),

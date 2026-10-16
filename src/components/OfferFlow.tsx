@@ -47,6 +47,7 @@ type State = {
   damage?: DamageState;
   title?: TitleRoute;
   keys?: "yes" | "no";
+  parts?: string[];
   miles?: number | null;
   competingOffer?: number | null;
   situation?: string;
@@ -56,6 +57,8 @@ const STORE = "ibv-offer-v1";
 const STEPS = ["vehicle", "drive", "damage", "title", "keys", "reveal", "lock", "done"] as const;
 type Step = (typeof STEPS)[number];
 const ease = [0.22, 1, 0.36, 1] as const;
+
+const PARTS = ["Catalytic converter", "Engine or transmission", "Battery", "Wheels or tires", "Nothing"];
 
 const MAKES = ["Acura", "Audi", "BMW", "Buick", "Cadillac", "Chevrolet", "Chrysler", "Dodge", "Fiat", "Ford", "GMC", "Genesis", "Honda", "Hyundai", "Infiniti", "Jaguar", "Jeep", "Kia", "Land Rover", "Lexus", "Lincoln", "Mazda", "Mercedes-Benz", "Mercury", "Mini", "Mitsubishi", "Nissan", "Pontiac", "Porsche", "Ram", "Saturn", "Scion", "Subaru", "Suzuki", "Tesla", "Toyota", "Volkswagen", "Volvo", "Harley-Davidson", "Yamaha", "Kawasaki"];
 
@@ -216,11 +219,37 @@ export function OfferFlow({ preset }: { preset: Record<string, string | undefine
           )}
 
           {step === "keys" && (
-            <Question title="Keys And Miles." sub="Last one. Mileage is optional.">
+            <Question title="Keys, Parts And Miles." sub="Last one. Anything missing is named now, so nothing changes at the curb.">
               <div className="grid grid-cols-2 gap-3">
                 <Option pressed={s.keys === "yes"} onClick={() => setS((p) => ({ ...p, keys: "yes" }))} Icon={Key} label="I Have Keys" />
                 <Option pressed={s.keys === "no"} onClick={() => setS((p) => ({ ...p, keys: "no" }))} Icon={Warning} label="No Keys" />
               </div>
+              <fieldset className="mt-2">
+                <legend className="mb-2 block text-sm text-ink-2">Has anything been replaced or removed?</legend>
+                <div className="flex flex-wrap gap-2">
+                  {PARTS.map((part) => {
+                    const on = (s.parts ?? []).includes(part);
+                    return (
+                      <button
+                        key={part}
+                        type="button"
+                        aria-pressed={on}
+                        onClick={() =>
+                          setS((p) => {
+                            const cur = p.parts ?? [];
+                            if (part === "Nothing") return { ...p, parts: on ? [] : ["Nothing"] };
+                            const rest = cur.filter((x) => x !== "Nothing");
+                            return { ...p, parts: on ? rest.filter((x) => x !== part) : [...rest, part] };
+                          })
+                        }
+                        className={`min-h-11 rounded-[4px] px-4 text-[15px] transition-colors ${on ? "bg-ink text-paper" : "bg-paper shadow-[inset_0_0_0_1px_var(--rule)] hover:shadow-[inset_0_0_0_1px_var(--ink-3)]"}`}
+                      >
+                        {part}
+                      </button>
+                    );
+                  })}
+                </div>
+              </fieldset>
               <label className="mt-2 block">
                 <span className="mb-2 block text-sm text-ink-2">About how many miles? (skip if unsure)</span>
                 <input
@@ -522,7 +551,7 @@ function Lock({ s, range, ai, carName, onDone }: { s: State; range: Estimate; ai
           company: hp,
           intent: s.situation ?? "seller",
           titleRoute: s.title,
-          vehicle: { ...s.vehicle, miles: s.miles ?? undefined, drive: s.drive, damage: s.damage, keys: s.keys },
+          vehicle: { ...s.vehicle, miles: s.miles ?? undefined, drive: s.drive, damage: s.damage, keys: s.keys, parts: s.parts?.join(", ") },
           estimate: { low: range.low, high: range.high, ai },
           competingOffer: s.competingOffer ?? undefined,
           page: window.location.pathname,
@@ -625,6 +654,7 @@ function Done({ s, carName }: { s: State; carName: string }) {
             ))}
           </ul>
           <p className="mt-4 text-sm text-ink-2">{r.note}</p>
+          <p className="mt-4 border-t border-rule pt-4 text-sm text-ink-2">After the sale, take your plates and toll tag off, and file a Vehicle Transfer Notification with TxDMV within 30 days. It keeps the next owner&apos;s tolls and tickets out of your name.</p>
         </div>
       )}
       <Link href="/" className="mt-10 inline-flex min-h-11 items-center gap-2 text-ink-2 hover:text-ink">

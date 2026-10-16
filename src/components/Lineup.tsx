@@ -16,7 +16,7 @@ const range: { slot: SlotName; title: string; line: string; href: string }[] = [
   { slot: "noTitle", title: "No Title", line: "Lost, never transferred, or not in your name.", href: "/offer?title=lost" },
   { slot: "wrecked", title: "Wrecked", line: "Accident damage, airbags out, cracked glass.", href: "/offer?damage=major" },
   { slot: "flooded", title: "Flooded", line: "Water got inside. Mark still buys it.", href: "/offer?damage=flood" },
-  { slot: "runsFine", title: "Runs Fine", line: "Just done with it. Sold in a day.", href: "/offer?drive=drives" },
+  { slot: "runsFine", title: "Runs Fine", line: "Just done with it. Mark buys those too.", href: "/offer?drive=drives" },
   { slot: "dealer", title: "Dealer Units", line: "Aged inventory, one call, picked up free.", href: "/dealers" },
 ];
 

@@ -109,9 +109,12 @@ export const areas = [
 ] as const;
 
 export const faqs = [
+  { q: "Will the price change when the truck shows up?", a: "Mark makes the final offer himself after a quick look, before anything is loaded. Tell him up front about anything missing or replaced, like the catalytic converter, and there is nothing left to surprise anyone at the curb. You never have to sell." },
+  { q: "Cash or check? Paid before or after it's loaded?", a: "Cash on the spot, before the car is towed." },
+  { q: "What if there's still a loan on it?", a: "Tell Mark when you send the car. He will tell you exactly what's needed before he drives out, so nothing stalls on pickup day." },
+  { q: "Who stops the toll bills after I sell?", a: "Take your plates and toll tag off, and file a Vehicle Transfer Notification with TxDMV within 30 days. It protects you from the next owner's tolls and tickets. Mark can show you how." },
   { q: "What types of vehicles do you buy?", a: "Cars, trucks, SUVs, motorcycles, RVs and even boats. Running or not, you get a fair cash offer." },
   { q: "Do I need a title to sell my car?", a: "Not always. Mark can work with you if you've lost the title, as long as you can show proof of ownership and a valid ID." },
-  { q: "How fast can I get paid?", a: "Same day. Once Mark sees the vehicle in person, you're paid on the spot, before it's towed." },
   { q: "Is the online number my final offer?", a: "It's a fast estimate to show you where you stand. Mark confirms the final offer after a quick look at the vehicle and its VIN. No pressure and no obligation." },
   { q: "Does the tow cost anything?", a: "No. Towing is free anywhere in Houston." },
   { q: "What hours are you open?", a: "Every day, 8 AM to 10 PM." },
