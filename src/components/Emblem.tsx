@@ -1,0 +1,40 @@
+/*
+  Vector redraw of the iBuy Vehicles emblem (red and blue swirl, car in a blue
+  disc) so it stays crisp at any size. Mark should approve it against the
+  original in public/brand/original-logo.png.
+*/
+export function Emblem({ size = 40, spin = false, className = "" }: { size?: number; spin?: boolean; className?: string }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 100 100" className={className} aria-hidden>
+      <g className={spin ? "spin-slow" : undefined}>
+        <path d="M50 4a46 46 0 0 1 44.6 34.8" fill="none" stroke="#e1252c" strokeWidth="7" strokeLinecap="round" />
+        <path d="M94.2 40.5A46 46 0 0 1 60 94.9" fill="none" stroke="#1f48c9" strokeWidth="5" strokeLinecap="round" opacity=".9" />
+        <path d="M50 96a46 46 0 0 1-44.6-34.8" fill="none" stroke="#e1252c" strokeWidth="7" strokeLinecap="round" />
+        <path d="M5.8 59.5A46 46 0 0 1 40 5.1" fill="none" stroke="#1f48c9" strokeWidth="5" strokeLinecap="round" opacity=".9" />
+      </g>
+      <circle cx="50" cy="50" r="35" fill="#fff" />
+      <circle cx="50" cy="50" r="30.5" fill="#1f3fb0" />
+      <path
+        d="M31 60v-8.5l4.6-10.2c1-2.3 3.3-3.8 5.8-3.8h17.2c2.5 0 4.8 1.5 5.8 3.8L69 51.5V60c0 1.4-1.1 2.5-2.5 2.5h-3c-1.4 0-2.5-1.1-2.5-2.5v-1.5H39V60c0 1.4-1.1 2.5-2.5 2.5h-3C32.1 62.5 31 61.4 31 60Z"
+        fill="#0b1640"
+      />
+      <path d="M37.2 49.5l3-6.7c.4-.9 1.3-1.5 2.3-1.5h15c1 0 1.9.6 2.3 1.5l3 6.7Z" fill="#7da2ff" opacity=".85" />
+      <circle cx="37.5" cy="54.2" r="2.3" fill="#fff" />
+      <circle cx="62.5" cy="54.2" r="2.3" fill="#fff" />
+    </svg>
+  );
+}
+
+export function Wordmark({ className = "", dark = false }: { className?: string; dark?: boolean }) {
+  return (
+    <span className={`inline-flex items-center gap-2 whitespace-nowrap md:gap-2.5 ${className}`}>
+      <Emblem size={36} className="size-8 md:size-9" />
+      <span className={`font-[family-name:var(--font-display)] text-[1.25rem] md:text-[1.45rem] font-semibold leading-none tracking-[-0.01em] ${dark ? "text-coal" : "text-white"}`}>
+        <span className="relative">
+          ı<span className="absolute left-1/2 top-[0.08em] h-[0.2em] w-[0.2em] -translate-x-1/2 rounded-full bg-red" />
+        </span>
+        Buy Vehicles
+      </span>
+    </span>
+  );
+}
