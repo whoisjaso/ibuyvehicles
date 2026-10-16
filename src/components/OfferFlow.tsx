@@ -169,7 +169,7 @@ export function OfferFlow({ preset }: { preset: Record<string, string | undefine
               </button>
             ) : (
               <span className="inline-flex items-center gap-2">
-                <ShieldCheck size={18} weight="fill" className="text-tape" /> No obligation · Takes ~60 seconds
+                <ShieldCheck size={18} weight="fill" className="text-ink-2" /> No obligation · Takes ~60 seconds
               </span>
             )}
             <span className="tabular-nums">{pct}%</span>
@@ -405,11 +405,11 @@ function VehicleReport({ s }: { s: State }) {
   ].filter(([, x]) => x);
   return (
     <motion.div initial={{ opacity: 0, y: 12, scale: 0.98 }} animate={{ opacity: 1, y: 0, scale: 1 }} transition={{ duration: 0.5, ease }} className="overflow-hidden rounded-[14px] bg-asphalt-2 ring-1 ring-[var(--line)]">
-      <div className="flex items-center justify-between bg-tape/15 px-5 py-3 text-sm font-semibold text-tape">
+      <div className="flex items-center justify-between bg-white/10 px-5 py-3 text-sm font-semibold text-ink">
         <span className="inline-flex items-center gap-2">
           <CheckCircle size={18} weight="fill" /> VIN Matched
         </span>
-        <span className="font-mono text-xs tracking-widest text-tape/80">{v.vin}</span>
+        <span className="font-mono text-xs tracking-widest text-ink-2">{v.vin}</span>
       </div>
       <div className="p-5">
         <p className="vinyl text-[2.2rem]">
@@ -426,7 +426,7 @@ function VehicleReport({ s }: { s: State }) {
         </dl>
         <div className="mt-4 rounded-[6px] bg-black/30 p-3 text-sm">
           <p className="flex items-center gap-2 font-semibold">
-            <ShieldCheck size={18} weight="fill" className={s.recalls.length ? "text-amber-400" : "text-tape"} />
+            <ShieldCheck size={18} weight="fill" className={s.recalls.length ? "text-amber-400" : "text-ink"} />
             {s.recalls.length ? `${s.recalls.length} Safety Recall${s.recalls.length > 1 ? "s" : ""} On File (NHTSA)` : "No Safety Recalls Found (NHTSA)"}
           </p>
           {s.recalls.slice(0, 3).map((r) => (
@@ -444,7 +444,7 @@ function VehicleReport({ s }: { s: State }) {
 function Reveal({ range, carName, ai, s, onLock }: { range: Estimate; carName: string; ai: { headline?: string; factors?: string[]; ai: boolean } | null; s: State; onLock: () => void }) {
   return (
     <div className="text-center">
-      <motion.div initial={{ scale: 0.6, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ type: "spring", stiffness: 260, damping: 18 }} className="mx-auto grid size-16 place-items-center rounded-full bg-tape/15 text-tape">
+      <motion.div initial={{ scale: 0.6, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ type: "spring", stiffness: 260, damping: 18 }} className="mx-auto grid size-16 place-items-center rounded-full bg-white/10 text-ink">
         <CheckCircle size={36} weight="fill" />
       </motion.div>
       <h1 className="vinyl mt-6 text-[clamp(2.2rem,6vw,3.2rem)]">{carName}</h1>
@@ -466,7 +466,7 @@ function Reveal({ range, carName, ai, s, onLock }: { range: Estimate; carName: s
           {ai?.headline && (
             <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} className="relative mt-6 rounded-[8px] bg-black/35 p-4 text-left">
               <p className="flex items-center gap-2 text-sm font-semibold text-white">
-                <Sparkle size={16} weight="fill" className="text-tape" /> {ai.headline}
+                <Sparkle size={16} weight="fill" className="text-ink" /> {ai.headline}
               </p>
               {ai.factors && (
                 <ul className="mt-2 flex flex-wrap gap-2">
@@ -580,7 +580,7 @@ function Done({ s, carName }: { s: State; carName: string }) {
   const smsBody = `Hi Mark, I just sent my ${carName} on the website${s.vehicle.vin ? ` (VIN ${s.vehicle.vin})` : ""}. Here are photos:`;
   return (
     <div>
-      <motion.div initial={{ scale: 0.5, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ type: "spring", stiffness: 240, damping: 16 }} className="grid size-20 place-items-center rounded-full bg-tape text-white">
+      <motion.div initial={{ scale: 0.5, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ type: "spring", stiffness: 240, damping: 16 }} className="grid size-20 place-items-center rounded-full bg-ink text-asphalt">
         <CheckCircle size={44} weight="fill" />
       </motion.div>
       <h1 className="vinyl vinyl-md mt-8">It&apos;s With {business.owner}.</h1>
@@ -600,7 +600,7 @@ function Done({ s, carName }: { s: State; carName: string }) {
           [`Pickup, Often Within ${business.pickupWindow}`, "Paid on the spot, before the tow. The tow is free."],
         ].map(([t, d], i) => (
           <motion.li key={t} initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.3 + i * 0.15 }} className="relative">
-            <span className="absolute -left-[33px] top-1 size-4 rounded-full border-2 border-asphalt bg-tape" />
+            <span className="absolute -left-[33px] top-1 size-4 rounded-full border-2 border-asphalt bg-ink" />
             <p className="font-[family-name:var(--font-vinyl)] uppercase text-xl font-semibold capitalize">{t}</p>
             <p className="text-ink-2">{d}</p>
           </motion.li>
@@ -612,7 +612,7 @@ function Done({ s, carName }: { s: State; carName: string }) {
           <ul className="mt-4 space-y-2.5">
             {r.bring.map((b) => (
               <li key={b} className="flex items-start gap-3">
-                <CheckCircle size={20} weight="fill" className="mt-0.5 shrink-0 text-tape" /> {b}
+                <CheckCircle size={20} weight="fill" className="mt-0.5 shrink-0 text-ink" /> {b}
               </li>
             ))}
           </ul>
@@ -641,7 +641,7 @@ function Question({ title, sub, children }: { title: string; sub?: string; child
 function Option({ pressed, onClick, Icon, label, sub }: { pressed: boolean; onClick: () => void; Icon: typeof Car; label: string; sub?: string }) {
   return (
     <button type="button" aria-pressed={pressed} onClick={onClick} className="option">
-      <span className={`grid size-11 shrink-0 place-items-center rounded-[4px] transition ${pressed ? "bg-tape text-white" : "bg-white/10"}`}>
+      <span className={`grid size-11 shrink-0 place-items-center rounded-[4px] transition ${pressed ? "bg-ink text-asphalt" : "bg-white/10"}`}>
         <Icon size={22} weight="fill" />
       </span>
       <span className="min-w-0">

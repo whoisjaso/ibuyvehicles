@@ -206,7 +206,7 @@ p {
   /* The beam: a band of amber light that travels across a surface once per beacon turn. */
   .sweep {
     pointer-events: none;
-    background: linear-gradient(105deg, transparent 38%, rgba(255, 178, 26, 0.16) 47%, rgba(255, 214, 140, 0.22) 50%, rgba(255, 178, 26, 0.16) 53%, transparent 62%);
+    background: linear-gradient(105deg, transparent 36%, rgba(255, 178, 26, 0.26) 46%, rgba(255, 220, 150, 0.38) 50%, rgba(255, 178, 26, 0.26) 54%, transparent 64%);
     background-size: 300% 100%;
     mix-blend-mode: screen;
     animation: sweep 3.2s var(--ease-in-out) infinite;

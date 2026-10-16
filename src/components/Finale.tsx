@@ -24,7 +24,7 @@ export function Finale() {
           </a>
         </div>
         <a href={mapsHref} target="_blank" rel="noopener" className="mt-12 inline-flex items-start gap-3 text-ink-2 transition-colors hover:text-ink">
-          <MapPin size={22} weight="fill" className="mt-0.5 shrink-0 text-tape" />
+          <MapPin size={22} weight="fill" className="mt-0.5 shrink-0 text-ink" />
           <span>
             {business.address.street}, {business.address.locality}, {business.address.region} {business.address.postal}. {business.hours.label}.
           </span>

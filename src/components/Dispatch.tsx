@@ -28,9 +28,9 @@ export function Dispatch() {
 
   return (
     <section ref={ref} id="dispatch" className="relative h-[300svh] bg-asphalt-2">
-      <div className="sticky top-0 flex h-[100svh] flex-col justify-center overflow-hidden">
+      <div className="sticky top-0 flex h-[100svh] flex-col justify-start overflow-hidden pt-[88px] lg:pt-[18svh]">
         <div className="beacon-cone left-[85%] top-[-50vmax] size-[110vmax] -translate-x-1/2 opacity-40" aria-hidden />
-        <div className="wrap relative grid gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-end lg:gap-16">
+        <div className="wrap relative grid gap-6 lg:grid-cols-[1.15fr_0.85fr] lg:items-end lg:gap-16">
           <div>
             <h2 className="vinyl vinyl-md text-ink-2">One Evening In Houston.</h2>
             <div className="mt-4 flex items-baseline gap-4" aria-live="polite">
@@ -48,7 +48,7 @@ export function Dispatch() {
                   </motion.span>
                 </AnimatePresence>
               </span>
-              <span className="vinyl text-[clamp(2rem,5vw,4rem)] text-tape">PM</span>
+              <span className="vinyl text-[clamp(2rem,5vw,4rem)] text-ink-3">PM</span>
             </div>
             <div className="mt-6 h-3 w-full max-w-[640px] overflow-hidden rounded-[2px] bg-asphalt-4" aria-hidden>
               <motion.div className="tape h-full" style={{ width: fill }} />
@@ -58,7 +58,7 @@ export function Dispatch() {
             {log.map((e, n) => (
               <li key={e.time} className={`py-3 transition-opacity duration-500 ${n === i ? "opacity-100" : n < i ? "opacity-45" : "opacity-30"}`}>
                 <p className="flex items-center gap-3 font-[family-name:var(--font-vinyl)] text-base font-bold uppercase tracking-[0.14em] text-ink-2">
-                  <span className={`size-2.5 rounded-[1px] transition-colors duration-500 ${n === i ? "bg-tape" : "bg-asphalt-4"}`} aria-hidden />
+                  <span className={`size-2.5 rounded-[1px] transition-colors duration-500 ${n === i ? "bg-ink" : "bg-asphalt-4"}`} aria-hidden />
                   {e.time} PM
                 </p>
                 <h3 className="vinyl mt-1 text-[clamp(1.9rem,3vw,2.6rem)] leading-[0.95]">{e.title}</h3>

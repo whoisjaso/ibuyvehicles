@@ -46,7 +46,7 @@ export function Header({ solid = false }: { solid?: boolean }) {
           </nav>
           <div className="flex items-center gap-3">
             <a href={telHref} className="hidden items-center gap-2 font-[family-name:var(--font-vinyl)] text-[1.35rem] font-extrabold tracking-[0.03em] md:inline-flex">
-              <Phone size={20} weight="fill" className="text-tape" /> {business.phoneDisplay}
+              <Phone size={20} weight="fill" /> {business.phoneDisplay}
             </a>
             <button onClick={() => setOpen(true)} aria-label="Open menu" className="grid size-12 place-items-center rounded-[4px] bg-asphalt-3 lg:hidden">
               <List size={24} weight="bold" />

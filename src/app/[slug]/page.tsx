@@ -69,7 +69,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             <ul className="mt-16 grid gap-x-10 gap-y-4 border-t border-[var(--line)] pt-8 sm:grid-cols-2">
               {points.map((p) => (
                 <li key={p} className="flex items-center gap-3 text-[1.2rem]">
-                  <CheckSquare size={26} weight="fill" className="shrink-0 text-tape" /> {p}
+                  <CheckSquare size={26} weight="fill" className="shrink-0 text-ink" /> {p}
                 </li>
               ))}
             </ul>
