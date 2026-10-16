@@ -164,7 +164,7 @@ export function OfferFlow({ preset }: { preset: Record<string, string | undefine
         <div className="mb-8">
           <div className="flex items-center justify-between text-sm text-ink-2">
             {idx > 0 ? (
-              <button onClick={back} className="-ml-2 inline-flex min-h-11 items-center gap-1.5 rounded-[4px] px-2 font-medium hover:text-white">
+              <button onClick={back} className="-ml-2 inline-flex min-h-11 items-center gap-1.5 rounded-[4px] px-2 font-medium hover:text-ink">
                 <ArrowLeft size={18} weight="bold" /> Back
               </button>
             ) : (
@@ -174,8 +174,8 @@ export function OfferFlow({ preset }: { preset: Record<string, string | undefine
             )}
             <span className="tabular-nums">{pct}%</span>
           </div>
-          <div className="mt-3 h-2.5 overflow-hidden rounded-[2px] bg-asphalt-3">
-            <motion.div className="tape h-full" animate={{ width: `${pct}%` }} transition={{ duration: 0.6, ease }} />
+          <div className="mt-3 h-2.5 overflow-hidden rounded-[2px] bg-stone">
+            <motion.div className="h-full bg-ink" animate={{ width: `${pct}%` }} transition={{ duration: 0.6, ease }} />
           </div>
         </div>
       )}
@@ -249,7 +249,7 @@ export function OfferFlow({ preset }: { preset: Record<string, string | undefine
                   />
                 </label>
               )}
-              <button disabled={!s.keys} onClick={next} className="decal decal-red mt-3 w-full text-lg disabled:opacity-40">
+              <button disabled={!s.keys} onClick={next} className="btn btn-ink mt-3 w-full text-lg disabled:opacity-40">
                 See My Estimate <ArrowRight size={18} weight="bold" />
               </button>
             </Question>
@@ -310,15 +310,15 @@ function VehicleStep({ s, setS, onDone }: { s: State; setS: React.Dispatch<React
 
   return (
     <div>
-      <h1 className="vinyl vinyl-md">What Are You Selling?</h1>
+      <h1 className="t-1">What Are You Selling?</h1>
       <p className="mt-3 text-ink-2">Use the VIN for the most accurate number, or just pick the year and make.</p>
 
-      <div className="mt-7 grid grid-cols-2 gap-1 rounded-[6px] bg-asphalt-2 p-1">
+      <div className="mt-7 grid grid-cols-2 gap-1 rounded-[4px] bg-stone p-1">
         {(["ymm", "vin"] as const).map((m) => (
           <button
             key={m}
             onClick={() => setMode(m)}
-            className={`min-h-12 rounded-[4px] font-[family-name:var(--font-vinyl)] uppercase text-lg font-semibold transition ${mode === m ? "bg-white text-asphalt" : "text-white/70"}`}
+            className={`min-h-12 rounded-[4px] font-medium text-lg font-semibold transition ${mode === m ? "bg-ink text-paper" : "text-ink-3"}`}
           >
             {m === "vin" ? "I Have The VIN" : "Year & Make"}
           </button>
@@ -346,11 +346,11 @@ function VehicleStep({ s, setS, onDone }: { s: State; setS: React.Dispatch<React
           </div>
           <p className="text-sm text-ink-3">Find it on the driver-side dashboard through the windshield, the driver door jamb, your registration or your insurance card.</p>
           {!decoded && (
-            <button onClick={decode} disabled={vin.length !== 17 || vinState === "loading"} className="decal decal-white w-full disabled:opacity-40">
+            <button onClick={decode} disabled={vin.length !== 17 || vinState === "loading"} className="btn btn-outline w-full disabled:opacity-40">
               {vinState === "loading" ? "Looking It Up…" : "Look Up My Vehicle"}
             </button>
           )}
-          {vinState === "error" && <p className="text-sm text-tape-hot">We couldn&apos;t match that VIN. Double-check it, or switch to Year & Make.</p>}
+          {vinState === "error" && <p className="text-sm text-[#b3261e]">We couldn&apos;t match that VIN. Double-check it, or switch to Year & Make.</p>}
           {decoded && <VehicleReport s={s} />}
         </div>
       ) : (
@@ -382,14 +382,14 @@ function VehicleStep({ s, setS, onDone }: { s: State; setS: React.Dispatch<React
             {BODY.map((b) => (
               <button key={b.v} aria-pressed={v.body === b.v} onClick={() => setV({ body: b.v })} className="option !min-h-[64px] !gap-3 !p-3">
                 <b.Icon size={24} weight="duotone" className="shrink-0" />
-                <span className="font-[family-name:var(--font-vinyl)] uppercase text-[1.05rem] font-semibold leading-tight">{b.label}</span>
+                <span className="font-medium text-[1.05rem] font-semibold leading-tight">{b.label}</span>
               </button>
             ))}
           </div>
         </div>
       )}
 
-      <button onClick={onDone} disabled={!canGo} className="decal decal-red mt-8 w-full text-lg disabled:opacity-40">
+      <button onClick={onDone} disabled={!canGo} className="btn btn-ink mt-8 w-full text-lg disabled:opacity-40">
         Continue <ArrowRight size={18} weight="bold" />
       </button>
     </div>
@@ -404,29 +404,29 @@ function VehicleReport({ s }: { s: State }) {
     ["Built In", v.plant],
   ].filter(([, x]) => x);
   return (
-    <motion.div initial={{ opacity: 0, y: 12, scale: 0.98 }} animate={{ opacity: 1, y: 0, scale: 1 }} transition={{ duration: 0.5, ease }} className="overflow-hidden rounded-[14px] bg-asphalt-2 ring-1 ring-[var(--line)]">
-      <div className="flex items-center justify-between bg-white/10 px-5 py-3 text-sm font-semibold text-ink">
+    <motion.div initial={{ opacity: 0, y: 12, scale: 0.98 }} animate={{ opacity: 1, y: 0, scale: 1 }} transition={{ duration: 0.5, ease }} className="overflow-hidden rounded-[12px] bg-stone ring-1 ring-rule">
+      <div className="flex items-center justify-between bg-stone px-5 py-3 text-sm font-semibold text-ink">
         <span className="inline-flex items-center gap-2">
           <CheckCircle size={18} weight="fill" /> VIN Matched
         </span>
         <span className="font-mono text-xs tracking-widest text-ink-2">{v.vin}</span>
       </div>
       <div className="p-5">
-        <p className="vinyl text-[2.2rem]">
+        <p className="t-1">
           {v.year} {v.make} {v.model}
         </p>
         {v.trim && <p className="text-ink-2">{v.trim}</p>}
         <dl className="mt-4 grid grid-cols-1 gap-2 text-sm sm:grid-cols-3">
           {rows.map(([k, x]) => (
-            <div key={k} className="rounded-[6px] bg-black/30 px-3 py-2">
+            <div key={k} className="rounded-[4px] bg-paper px-3 py-2">
               <dt className="text-ink-3">{k}</dt>
               <dd className="font-medium">{x}</dd>
             </div>
           ))}
         </dl>
-        <div className="mt-4 rounded-[6px] bg-black/30 p-3 text-sm">
+        <div className="mt-4 rounded-[4px] bg-paper p-3 text-sm">
           <p className="flex items-center gap-2 font-semibold">
-            <ShieldCheck size={18} weight="fill" className={s.recalls.length ? "text-amber-400" : "text-ink"} />
+            <ShieldCheck size={18} weight="fill" className={s.recalls.length ? "text-[#9a6700]" : "text-ink"} />
             {s.recalls.length ? `${s.recalls.length} Safety Recall${s.recalls.length > 1 ? "s" : ""} On File (NHTSA)` : "No Safety Recalls Found (NHTSA)"}
           </p>
           {s.recalls.slice(0, 3).map((r) => (
@@ -444,34 +444,34 @@ function VehicleReport({ s }: { s: State }) {
 function Reveal({ range, carName, ai, s, onLock }: { range: Estimate; carName: string; ai: { headline?: string; factors?: string[]; ai: boolean } | null; s: State; onLock: () => void }) {
   return (
     <div className="text-center">
-      <motion.div initial={{ scale: 0.6, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ type: "spring", stiffness: 260, damping: 18 }} className="mx-auto grid size-16 place-items-center rounded-full bg-white/10 text-ink">
+      <motion.div initial={{ scale: 0.6, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ type: "spring", stiffness: 260, damping: 18 }} className="mx-auto grid size-16 place-items-center rounded-full bg-stone text-ink">
         <CheckCircle size={36} weight="fill" />
       </motion.div>
-      <h1 className="vinyl mt-6 text-[clamp(2.2rem,6vw,3.2rem)]">{carName}</h1>
+      <h1 className="t-1 mt-6">{carName}</h1>
       <p className="mt-2 text-ink-2">Your instant estimate</p>
-      <div className="door mx-auto mt-6 p-8">
-        <span className="beacon-cone -z-10 -right-1/2 -top-1/2 size-[200%] opacity-50" aria-hidden />
+      <div className="mx-auto mt-6 rounded-[12px] bg-stone p-8">
+        
         
         {pricing.showDollarRange ? (
-          <p className="vinyl relative whitespace-nowrap text-[clamp(2.3rem,11vw,5.5rem)] leading-none">
+          <p className="relative whitespace-nowrap text-[clamp(2.4rem,10vw,4.75rem)] font-light leading-none tracking-[-0.035em] tabular-nums">
             <Rise to={range.low} />
             <span className="px-2 text-ink-3">to</span>
             <Rise to={range.high} delay={0.15} />
           </p>
         ) : (
-          <p className="vinyl relative text-[2.6rem] leading-tight">Mark Texts Your Number Within The Hour</p>
+          <p className="t-1 relative">Mark Texts Your Number Within The Hour</p>
         )}
         <p className="relative mt-4 text-sm text-ink-2">Estimated cash range · free tow included · paid at pickup</p>
         <AnimatePresence>
           {ai?.headline && (
-            <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} className="relative mt-6 rounded-[8px] bg-black/35 p-4 text-left">
-              <p className="flex items-center gap-2 text-sm font-semibold text-white">
+            <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} className="relative mt-6 rounded-[4px] bg-paper p-4 text-left">
+              <p className="flex items-center gap-2 text-sm font-semibold text-ink">
                 <Sparkle size={16} weight="fill" className="text-ink" /> {ai.headline}
               </p>
               {ai.factors && (
                 <ul className="mt-2 flex flex-wrap gap-2">
                   {ai.factors.map((f) => (
-                    <li key={f} className="rounded-[4px] bg-white/10 px-3 py-1 text-xs">
+                    <li key={f} className="rounded-[4px] bg-stone px-3 py-1 text-xs">
                       {f}
                     </li>
                   ))}
@@ -481,12 +481,12 @@ function Reveal({ range, carName, ai, s, onLock }: { range: Estimate; carName: s
           )}
         </AnimatePresence>
         {s.competingOffer ? (
-          <p className="relative mt-5 rounded-[8px] bg-paint p-3 text-sm">
+          <p className="relative mt-5 rounded-[4px] bg-paper p-3 ring-1 ring-rule text-sm">
             You have an offer of <strong>{money(s.competingOffer)}</strong>. Lock in below and Mark will look at both and tell you straight.
           </p>
         ) : null}
       </div>
-      <button onClick={onLock} className="decal decal-red mt-8 w-full text-lg">
+      <button onClick={onLock} className="btn btn-ink mt-8 w-full text-lg">
         <Lightning size={18} weight="fill" /> Lock It In With {business.owner}
       </button>
       <p className="mt-4 text-sm text-ink-3">This is an estimate, not an offer. {business.owner} confirms the final number after a quick look at the vehicle.</p>
@@ -543,9 +543,9 @@ function Lock({ s, range, ai, carName, onDone }: { s: State; range: Estimate; ai
 
   return (
     <form onSubmit={submit}>
-      <h1 className="vinyl vinyl-md">Where Should {business.owner} Reach You?</h1>
+      <h1 className="t-1">Where Should {business.owner} Reach You?</h1>
       <p className="mt-3 text-ink-2">
-        Your {carName} estimate is saved: <strong className="text-white">{pricing.showDollarRange ? `${money(range.low)} to ${money(range.high)}` : "pending"}</strong>. {business.owner} reviews it personally.
+        Your {carName} estimate is saved: <strong className="text-ink">{pricing.showDollarRange ? `${money(range.low)} to ${money(range.high)}` : "pending"}</strong>. {business.owner} reviews it personally.
       </p>
       <div className="mt-7 space-y-3">
         <input className="field" placeholder="First name" autoComplete="given-name" value={name} onChange={(e) => setName(e.target.value)} required />
@@ -555,18 +555,18 @@ function Lock({ s, range, ai, carName, onDone }: { s: State; range: Estimate; ai
           {(["text", "call"] as const).map((p) => (
             <button type="button" key={p} aria-pressed={pref === p} onClick={() => setPref(p)} className="option !min-h-14 justify-center">
               {p === "text" ? <ChatCircleText size={20} weight="fill" /> : <Phone size={20} weight="fill" />}
-              <span className="font-[family-name:var(--font-vinyl)] uppercase text-lg font-semibold capitalize">{p} Me</span>
+              <span className="font-medium text-lg font-semibold capitalize">{p} Me</span>
             </button>
           ))}
         </div>
         <textarea className="field !min-h-24 py-4" placeholder="Anything Mark should know? (optional)" value={notes} onChange={(e) => setNotes(e.target.value)} />
         <input tabIndex={-1} autoComplete="off" className="hidden" aria-hidden value={hp} onChange={(e) => setHp(e.target.value)} name="company" />
       </div>
-      <button disabled={state === "sending" || !name.trim() || digits.length < 10} className="decal decal-red mt-6 w-full text-lg disabled:opacity-40">
+      <button disabled={state === "sending" || !name.trim() || digits.length < 10} className="btn btn-ink mt-6 w-full text-lg disabled:opacity-40">
         {state === "sending" ? "Sending…" : "Send To Mark"}
       </button>
       {state === "error" && (
-        <p className="mt-3 text-center text-sm text-tape-hot">
+        <p className="mt-3 text-center text-sm text-[#b3261e]">
           That didn&apos;t go through. Call or text {business.phoneDisplay} and Mark will take it from there.
         </p>
       )}
@@ -580,35 +580,35 @@ function Done({ s, carName }: { s: State; carName: string }) {
   const smsBody = `Hi Mark, I just sent my ${carName} on the website${s.vehicle.vin ? ` (VIN ${s.vehicle.vin})` : ""}. Here are photos:`;
   return (
     <div>
-      <motion.div initial={{ scale: 0.5, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ type: "spring", stiffness: 240, damping: 16 }} className="grid size-20 place-items-center rounded-full bg-ink text-asphalt">
+      <motion.div initial={{ scale: 0.5, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ type: "spring", stiffness: 240, damping: 16 }} className="grid size-20 place-items-center rounded-full bg-ink text-paper">
         <CheckCircle size={44} weight="fill" />
       </motion.div>
-      <h1 className="vinyl vinyl-md mt-8">It&apos;s With {business.owner}.</h1>
+      <h1 className="t-1 mt-8">It&apos;s With {business.owner}.</h1>
       <p className="lede mt-4 text-ink-2">Want the fastest final number? Text a few photos: all four sides, the dash with the car on, and any damage.</p>
       <div className="mt-7 grid gap-3 sm:grid-cols-2">
-        <a href={smsHref(smsBody)} className="decal decal-red text-lg">
+        <a href={smsHref(smsBody)} className="btn btn-ink text-lg">
           <ChatCircleText size={20} weight="fill" /> Text Photos To Mark
         </a>
-        <a href={telHref} className="decal decal-white text-lg">
+        <a href={telHref} className="btn btn-outline text-lg">
           <Phone size={20} weight="fill" /> Call Now
         </a>
       </div>
-      <ol className="mt-12 space-y-5 border-l border-white/15 pl-6">
+      <ol className="mt-12 space-y-5 border-l border-rule pl-6">
         {[
           ["Mark Reviews It", "He looks at your answers and any photos you send."],
           ["You Get The Final Number", "By text or call, your choice. No obligation."],
           [`Pickup, Often Within ${business.pickupWindow}`, "Paid on the spot, before the tow. The tow is free."],
         ].map(([t, d], i) => (
           <motion.li key={t} initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.3 + i * 0.15 }} className="relative">
-            <span className="absolute -left-[33px] top-1 size-4 rounded-full border-2 border-asphalt bg-ink" />
-            <p className="font-[family-name:var(--font-vinyl)] uppercase text-xl font-semibold capitalize">{t}</p>
+            <span className="absolute -left-[33px] top-1 size-4 rounded-full border-2 border-paper bg-ink" />
+            <p className="font-medium text-xl font-semibold capitalize">{t}</p>
             <p className="text-ink-2">{d}</p>
           </motion.li>
         ))}
       </ol>
       {r && (
-        <div className="mt-10 rounded-[14px] bg-white/[.05] p-6 ring-1 ring-white/10">
-          <p className="vinyl text-[1.6rem]">Have Ready On Pickup Day</p>
+        <div className="mt-10 rounded-[12px] bg-stone p-6 ring-1 ring-rule">
+          <p className="t-3">Have Ready On Pickup Day</p>
           <ul className="mt-4 space-y-2.5">
             {r.bring.map((b) => (
               <li key={b} className="flex items-start gap-3">
@@ -619,7 +619,7 @@ function Done({ s, carName }: { s: State; carName: string }) {
           <p className="mt-4 text-sm text-ink-2">{r.note}</p>
         </div>
       )}
-      <Link href="/" className="mt-10 inline-flex min-h-11 items-center gap-2 text-ink-2 hover:text-white">
+      <Link href="/" className="mt-10 inline-flex min-h-11 items-center gap-2 text-ink-2 hover:text-ink">
         <ArrowLeft size={16} /> Back to home
       </Link>
     </div>
@@ -631,7 +631,7 @@ function Done({ s, carName }: { s: State; carName: string }) {
 function Question({ title, sub, children }: { title: string; sub?: string; children: React.ReactNode }) {
   return (
     <div>
-      <h1 className="vinyl vinyl-md">{title}</h1>
+      <h1 className="t-1">{title}</h1>
       {sub && <p className="mt-3 text-ink-2">{sub}</p>}
       <div className="mt-7 space-y-3">{children}</div>
     </div>
@@ -641,11 +641,11 @@ function Question({ title, sub, children }: { title: string; sub?: string; child
 function Option({ pressed, onClick, Icon, label, sub }: { pressed: boolean; onClick: () => void; Icon: typeof Car; label: string; sub?: string }) {
   return (
     <button type="button" aria-pressed={pressed} onClick={onClick} className="option">
-      <span className={`grid size-11 shrink-0 place-items-center rounded-[4px] transition ${pressed ? "bg-ink text-asphalt" : "bg-white/10"}`}>
+      <span className={`grid size-11 shrink-0 place-items-center rounded-[4px] transition ${pressed ? "bg-ink text-paper" : "bg-stone"}`}>
         <Icon size={22} weight="fill" />
       </span>
       <span className="min-w-0">
-        <span className="block font-[family-name:var(--font-vinyl)] uppercase text-[1.3rem] font-semibold capitalize leading-tight">{label}</span>
+        <span className="block font-medium text-[1.3rem] font-semibold capitalize leading-tight">{label}</span>
         {sub && <span className="mt-0.5 block text-sm text-ink-2">{sub}</span>}
       </span>
     </button>

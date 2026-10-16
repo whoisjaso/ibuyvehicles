@@ -16,7 +16,6 @@ export default async function OfferPage({ searchParams }: { searchParams: Promis
     <>
       <Header solid />
       <main className="relative min-h-[100svh] overflow-hidden pb-32 pt-28 md:pt-36">
-        <div className="beacon-cone pointer-events-none left-[90%] top-[-60vmax] size-[120vmax] -translate-x-1/2 opacity-40" aria-hidden />
         <div className="wrap relative">
           <OfferFlow preset={preset} />
         </div>

@@ -1,9 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
-import "@fontsource/big-shoulders-display/700";
-import "@fontsource/big-shoulders-display/800";
-import "@fontsource/atkinson-hyperlegible-next/400.css";
-import "@fontsource/atkinson-hyperlegible-next/700.css";
+import "@fontsource/hanken-grotesk/300.css";
+import "@fontsource/hanken-grotesk/400.css";
+import "@fontsource/hanken-grotesk/500.css";
+import "@fontsource/hanken-grotesk/600.css";
 import "./globals.css";
 import { MotionProvider } from "@/components/MotionProvider";
 import { MobileDock } from "@/components/MobileDock";
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image" },
 };
 
-export const viewport: Viewport = { themeColor: "#0c0e11", colorScheme: "dark" };
+export const viewport: Viewport = { themeColor: "#ffffff", colorScheme: "light" };
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -54,11 +54,11 @@ const jsonLd = {
 };
 
 const CONTRACT = `
-THESIS: The site is a flatbed at night in Houston: door lettering, conspicuity tape, an amber beacon. It refuses the category default of a stock-photo hero with a red cash button over a gradient.
-OWN-WORLD: Wet-asphalt off-black, reflective white ink, logo red as the one action decal, beacon amber as light only, door-paint blue for the dealer field and panels. Big Shoulders Display vinyl caps, Atkinson Hyperlegible body. Decals 4px, panels 14px, red-white chevron tape as edges and progress.
-STORY: A stressed seller sees "Cash Before The Tow", finds their own problem in door lettering, watches one evening go from text to paid, then taps Get My Offer or the phone number.
-FIRST VIEWPORT: Left, three-line vinyl headline with live open lamp, 20-word line, Get My Offer and Call Mark. Right, the painted door panel with emblem, name and phone. Beacon sweeps both; chevron tape along the bottom edge.
-FORM: Night Tow Livery, grounded list position 1 (pick), seed 7c1b9f3a.
+THESIS: A marque site for problem cars: every car is photographed like a flagship and every seller is treated like a client. It refuses the category default of a loud red cash banner over a stock junkyard photo.
+OWN-WORLD: Porsche monochrome. White and stone greys, near-black ink, one grotesk (Hanken Grotesk) set quietly, 4px controls, 12px photo tiles, frosted buttons over photos. The emblem is the only colour.
+STORY: The seller lands on one calm photograph and "Cash Before The Tow.", finds their car in the range, watches one evening go from message to cash, and taps Get My Offer or the number.
+FIRST VIEWPORT: Full-bleed studio photograph (A01), headline lower-left at the gutter, one line, Get My Offer (white) and Call Mark (frost). Menu left, emblem and wordmark centred, phone right.
+FORM: Brief-pinned (Porsche, Rolex, Patek Philippe, Loro Piana; Porsche monochrome palette chosen by the client). Supersedes roll 7c1b9f3a.
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
 `;
 

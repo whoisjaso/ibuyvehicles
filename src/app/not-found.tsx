@@ -6,9 +6,9 @@ export default function NotFound() {
     <>
       <Header solid />
       <main className="wrap grid min-h-[100svh] content-center">
-        <h1 className="vinyl vinyl-xl">Wrong Turn.</h1>
+        <h1 className="t-hero">Wrong Turn.</h1>
         <p className="lede mt-6">That page is gone. Your car can be too.</p>
-        <Link href="/offer" className="decal decal-red mt-9 self-start justify-self-start">
+        <Link href="/offer" className="btn btn-ink mt-9 self-start justify-self-start">
           Get My Offer
         </Link>
       </main>

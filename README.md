@@ -6,7 +6,7 @@ The new ibuyvehicles.com: Houston's cash car buyer (Mark), rebuilt as a fast, an
 
 | Route | What it does |
 |---|---|
-| `/` | Night Tow Livery: "Cash Before The Tow." with the painted cab door (name and phone) under a sweeping amber beacon; the problem board ("What's wrong with it?") that opens the estimator preset; the pinned "One Evening In Houston" dispatch clock; title router; Google reviews; Mark's real photos; offer and dealer fields; Meet Mark; FAQ; the phone number as door lettering |
+| `/` | Porsche-grade monochrome: one full-bleed studio photograph and "Cash Before The Tow."; the swipeable range of problem cars (each opens the estimator preset); a quiet statement with the facts; "One Evening, Start To Finish" (sticky clock beside three tall photographs); title router; build-your-offer band; Google reviews; Mark; offer and dealer tiles; FAQ; finale photograph |
 | `/offer` | The instant offer: VIN lookup (NHTSA decode + open recalls) or year/make/model, then one question per screen, the estimate, and "Lock it in with Mark". Presets via `?body= &drive= &damage= &title= &situation=` |
 | `/dealers` | Aged inventory, direct to Mark |
 | `/about` | Story, numbers, Mark, reviews |
@@ -21,7 +21,7 @@ Every lead carries a `titleRoute` (`in-hand`, `not-in-name`, `lost`, `salvage`, 
 3. **Lead delivery** (`.env.example`): `LEAD_WEBHOOK_URL` (n8n, Zapier, CRM, the future desk) or `RESEND_API_KEY` + `LEAD_TO_EMAIL`. With neither set, leads only print to the server log.
 4. **Optional AI review**: set `ANTHROPIC_API_KEY` and Claude adjusts the range within ±15% and explains what moves the number. Without it, the rules engine answers alone. If Claude declines or fails, the rules range stands.
 5. **The emblem** in `src/components/Emblem.tsx` is a vector redraw of the original logo (`public/brand/original-logo.png`). Mark should approve it.
-6. **Images**: see `docs/IMAGE-BRIEF.md` (mostly real phone photos: Mark's portrait first).
+6. **Images**: every slot has a code (A01 to R04). Prompts, reference images and the status table are in `docs/ASSET-BRIEF.md`. Place a delivered image by setting its `src` in `src/data/media.ts`.
 
 ## Design
 

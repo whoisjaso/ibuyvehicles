@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { CheckSquare, ArrowRight, Phone } from "@phosphor-icons/react/dist/ssr";
+import { Check, ArrowRight, Phone } from "@phosphor-icons/react/dist/ssr";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Faq } from "@/components/Faq";
-import { Dispatch } from "@/components/Dispatch";
+import { Evening } from "@/components/Evening";
 import { Reviews } from "@/components/Reviews";
 import { Finale } from "@/components/Finale";
 import { services, areas, faqs } from "@/data/services";
@@ -50,33 +50,30 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
 
   return (
     <>
-      <Header />
+      <Header solid />
       <main>
         <section className="relative isolate overflow-hidden pb-20 pt-36 md:pt-44">
-          <div className="beacon-cone -z-10 left-[85%] top-[-50vmax] size-[120vmax] -translate-x-1/2 opacity-70" aria-hidden />
-          <div className="grain -z-10" />
           <div className="wrap">
-            <h1 className="vinyl vinyl-xl max-w-[12ch]">{title}</h1>
+            <h1 className="t-hero max-w-[12ch]">{title}</h1>
             <p className="lede mt-7">{lede}</p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <Link href={href} className="decal decal-red">
+              <Link href={href} className="btn btn-ink">
                 Get My Offer <ArrowRight size={20} weight="bold" />
               </Link>
-              <a href={telHref} className="decal decal-line">
+              <a href={telHref} className="btn btn-outline">
                 <Phone size={20} weight="fill" /> {business.phoneDisplay}
               </a>
             </div>
-            <ul className="mt-16 grid gap-x-10 gap-y-4 border-t border-[var(--line)] pt-8 sm:grid-cols-2">
+            <ul className="mt-16 grid gap-x-10 gap-y-4 border-t border-rule pt-8 sm:grid-cols-2">
               {points.map((p) => (
                 <li key={p} className="flex items-center gap-3 text-[1.2rem]">
-                  <CheckSquare size={26} weight="fill" className="shrink-0 text-ink" /> {p}
+                  <Check size={22} className="shrink-0" /> {p}
                 </li>
               ))}
             </ul>
           </div>
         </section>
-        <div className="tape h-7 md:h-9" aria-hidden />
-        <Dispatch />
+        <Evening />
         <Reviews />
         <Faq items={r.kind === "service" ? [...r.s.faq, ...faqs.slice(2, 4)] : faqs} />
         <Finale />
