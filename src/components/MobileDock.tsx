@@ -3,31 +3,34 @@
 import Link from "next/link";
 import { motion, useMotionValueEvent, useScroll } from "motion/react";
 import { useState } from "react";
-import { Phone, ChatCircleText, Lightning } from "@phosphor-icons/react";
+import { usePathname } from "next/navigation";
+import { Phone, ChatCircleText } from "@phosphor-icons/react";
 import { telHref, smsHref } from "@/data/business";
 
-/** Thumb-zone dock on phones: the three ways to start, always one tap away. */
+/** Thumb-zone dock on phones: call, text, or start the offer. Hidden inside the offer flow itself. */
 export function MobileDock() {
   const { scrollY } = useScroll();
   const [show, setShow] = useState(false);
-  useMotionValueEvent(scrollY, "change", (y) => setShow(y > 420));
+  const path = usePathname();
+  useMotionValueEvent(scrollY, "change", (y) => setShow(y > 480));
+  if (path?.startsWith("/offer")) return null;
   return (
     <motion.div
-      className="fixed inset-x-3 bottom-3 z-40 md:hidden"
+      className="fixed inset-x-0 bottom-0 z-40 md:hidden"
       initial={false}
-      animate={{ y: show ? 0 : 120, opacity: show ? 1 : 0 }}
-      transition={{ type: "spring", stiffness: 420, damping: 36 }}
-      style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
+      animate={{ y: show ? 0 : "110%" }}
+      transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
     >
-      <div className="glass flex items-center gap-2 rounded-full bg-night/80 p-2">
-        <a href={telHref} aria-label="Call Mark" className="grid size-12 shrink-0 place-items-center rounded-full bg-white/10">
-          <Phone size={20} weight="fill" />
+      <div className="tape h-1.5" aria-hidden />
+      <div className="flex gap-2 bg-asphalt/96 p-2.5 backdrop-blur-md" style={{ paddingBottom: "max(10px, env(safe-area-inset-bottom))" }}>
+        <a href={telHref} aria-label="Call Mark" className="grid size-[58px] shrink-0 place-items-center rounded-[4px] bg-asphalt-3">
+          <Phone size={24} weight="fill" />
         </a>
-        <a href={smsHref("Hi Mark, I want to sell my car.")} aria-label="Text Mark" className="grid size-12 shrink-0 place-items-center rounded-full bg-white/10">
-          <ChatCircleText size={20} weight="fill" />
+        <a href={smsHref("Hi Mark, I want to sell my car.")} aria-label="Text Mark" className="grid size-[58px] shrink-0 place-items-center rounded-[4px] bg-asphalt-3">
+          <ChatCircleText size={24} weight="fill" />
         </a>
-        <Link href="/offer" className="btn btn-cash shine !min-h-12 flex-1 text-base">
-          <Lightning size={18} weight="fill" /> Get My Cash Offer
+        <Link href="/offer" className="decal decal-red flex-1">
+          Get My Offer
         </Link>
       </div>
     </motion.div>

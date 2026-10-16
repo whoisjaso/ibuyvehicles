@@ -9,6 +9,11 @@
 */
 
 export const pricing = {
+  /**
+   * TODO(Mark): false until Mark has replaced the placeholder values below with
+   * what he actually pays. Every build prints a warning while this is false.
+   */
+  confirmedByMark: false,
   showDollarRange: true,
 
   /** Floor: what a vehicle is worth as scrap, per US ton of curb weight. */

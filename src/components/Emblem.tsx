@@ -25,15 +25,12 @@ export function Emblem({ size = 40, spin = false, className = "" }: { size?: num
   );
 }
 
-export function Wordmark({ className = "", dark = false }: { className?: string; dark?: boolean }) {
+export function Wordmark({ className = "" }: { className?: string }) {
   return (
-    <span className={`inline-flex items-center gap-2 whitespace-nowrap md:gap-2.5 ${className}`}>
+    <span className={`inline-flex items-center gap-2.5 whitespace-nowrap ${className}`}>
       <Emblem size={36} className="size-8 md:size-9" />
-      <span className={`font-[family-name:var(--font-display)] text-[1.25rem] md:text-[1.45rem] font-semibold leading-none tracking-[-0.01em] ${dark ? "text-coal" : "text-white"}`}>
-        <span className="relative">
-          ı<span className="absolute left-1/2 top-[0.08em] h-[0.2em] w-[0.2em] -translate-x-1/2 rounded-full bg-red" />
-        </span>
-        Buy Vehicles
+      <span className="font-[family-name:var(--font-vinyl)] text-[1.35rem] font-extrabold uppercase leading-none tracking-[0.06em] md:text-[1.5rem]">
+        iBuy Vehicles
       </span>
     </span>
   );

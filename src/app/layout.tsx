@@ -1,8 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
-import "@fontsource/barlow-semi-condensed/500.css";
-import "@fontsource/barlow-semi-condensed/600.css";
-import "@fontsource-variable/inter";
+import "@fontsource/big-shoulders-display/700";
+import "@fontsource/big-shoulders-display/800";
+import "@fontsource/atkinson-hyperlegible-next/400.css";
+import "@fontsource/atkinson-hyperlegible-next/700.css";
 import "./globals.css";
 import { MotionProvider } from "@/components/MotionProvider";
 import { MobileDock } from "@/components/MobileDock";
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image" },
 };
 
-export const viewport: Viewport = { themeColor: "#07080b", colorScheme: "dark" };
+export const viewport: Viewport = { themeColor: "#0c0e11", colorScheme: "dark" };
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -52,10 +53,20 @@ const jsonLd = {
   sameAs: [business.social.facebook, business.social.x],
 };
 
+const CONTRACT = `
+THESIS: The site is a flatbed at night in Houston: door lettering, conspicuity tape, an amber beacon. It refuses the category default of a stock-photo hero with a red cash button over a gradient.
+OWN-WORLD: Wet-asphalt off-black, reflective white ink, logo red as the one action decal, beacon amber as light only, door-paint blue for the dealer field and panels. Big Shoulders Display vinyl caps, Atkinson Hyperlegible body. Decals 4px, panels 14px, red-white chevron tape as edges and progress.
+STORY: A stressed seller sees "Cash Before The Tow", finds their own problem in door lettering, watches one evening go from text to paid, then taps Get My Offer or the phone number.
+FIRST VIEWPORT: Left, three-line vinyl headline with live open lamp, 20-word line, Get My Offer and Call Mark. Right, the painted door panel with emblem, name and phone. Beacon sweeps both; chevron tape along the bottom edge.
+FORM: Night Tow Livery, grounded list position 1 (pick), seed 7c1b9f3a.
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+`;
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body>
+        <div hidden dangerouslySetInnerHTML={{ __html: `<!--${CONTRACT}-->` }} />
         <MotionProvider>
           {children}
           <MobileDock />

@@ -19,12 +19,12 @@ export const business = {
   phone: "+12818400452", // PUBLIC
   phoneDisplay: "(281) 840-0452", // PUBLIC
   email: "mark@ibuyvehicles.com", // PUBLIC
-  hours: { open: 8, close: 22, days: "Every Day", label: "Mon–Sun 8 AM–10 PM" }, // PUBLIC: "Mon - Sun : 8 AM–10 PM"
+  hours: { open: 8, close: 22, days: "Every Day", label: "Every day, 8 AM to 10 PM" }, // PUBLIC: "Mon - Sun : 8 AM–10 PM"
   timeZone: "America/Chicago",
   since: 2010, // PUBLIC: "Serving Houston and surrounding areas since 2010"
   googleReviews: 252, // PUBLIC: Trustindex widget, "252 Google reviews"
   googleRating: null as number | null, // not published on the site; ask Mark
-  pickupWindow: "2–4 hours", // PUBLIC: same-day page, "we can often arrive at your door within two to four hours"
+  pickupWindow: "2 to 4 hours", // PUBLIC: same-day page, "we can often arrive at your door within two to four hours"
   social: {
     facebook: "https://www.facebook.com/Ibuyvehicleshouston/", // PUBLIC
     x: "https://x.com/ibuyvehicles", // PUBLIC

@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { CheckCircle, ArrowRight, Phone } from "@phosphor-icons/react/dist/ssr";
+import { CheckSquare, ArrowRight, Phone } from "@phosphor-icons/react/dist/ssr";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Faq } from "@/components/Faq";
-import { Journey } from "@/components/Journey";
+import { Dispatch } from "@/components/Dispatch";
 import { Reviews } from "@/components/Reviews";
 import { Finale } from "@/components/Finale";
 import { services, areas, faqs } from "@/data/services";
@@ -44,7 +44,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
     r.kind === "service"
       ? r.s.lede
       : `Selling a car in ${r.a.name}? ${business.owner} buys running, junk, wrecked and no-title vehicles, tows them free and pays you before the tow. Often there within ${business.pickupWindow}.`;
-  const points = r.kind === "service" ? r.s.points : ["Free towing from your door", "Paid at pickup", "No title? There's a path", `Open ${business.hours.label}`];
+  const points = r.kind === "service" ? r.s.points : ["Free towing from your door", "Paid at pickup", "No title? There's a way", business.hours.label];
   const qs = new URLSearchParams(Object.entries(r.kind === "service" ? r.s.preset : {}) as [string, string][]).toString();
   const href = `/offer${qs ? `?${qs}` : ""}`;
 
@@ -52,33 +52,33 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
     <>
       <Header />
       <main>
-        <section className="relative isolate overflow-hidden pt-36 pb-24 md:pt-48">
-          <div className="absolute inset-0 -z-10 bg-[radial-gradient(70%_80%_at_80%_20%,rgba(225,37,44,.25),transparent_60%),radial-gradient(60%_70%_at_10%_90%,rgba(31,72,201,.25),transparent_60%)]" />
+        <section className="relative isolate overflow-hidden pb-20 pt-36 md:pt-44">
+          <div className="beacon-cone -z-10 left-[85%] top-[-50vmax] size-[120vmax] -translate-x-1/2 opacity-70" aria-hidden />
           <div className="grain -z-10" />
           <div className="wrap">
-            <p className="eyebrow text-white/60">{r.kind === "service" ? "What We Buy" : "Houston Neighborhoods"}</p>
-            <h1 className="display display-xl mt-4 max-w-[13ch]">{title}</h1>
-            <p className="lede mt-6 max-w-[620px] text-white/80">{lede}</p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link href={href} className="btn btn-cash shine text-lg">
-                Get My Cash Offer <ArrowRight size={18} weight="bold" />
+            <h1 className="vinyl vinyl-xl max-w-[12ch]">{title}</h1>
+            <p className="lede mt-7">{lede}</p>
+            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+              <Link href={href} className="decal decal-red">
+                Get My Offer <ArrowRight size={20} weight="bold" />
               </Link>
-              <a href={telHref} className="btn btn-frost text-lg">
-                <Phone size={18} weight="fill" /> {business.phoneDisplay}
+              <a href={telHref} className="decal decal-line">
+                <Phone size={20} weight="fill" /> {business.phoneDisplay}
               </a>
             </div>
-            <ul className="mt-14 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            <ul className="mt-16 grid gap-x-10 gap-y-4 border-t border-[var(--line)] pt-8 sm:grid-cols-2">
               {points.map((p) => (
-                <li key={p} className="glass flex items-center gap-3 rounded-2xl p-5 font-[family-name:var(--font-display)] text-lg font-semibold capitalize">
-                  <CheckCircle size={24} weight="fill" className="shrink-0 text-emerald-400" /> {p}
+                <li key={p} className="flex items-center gap-3 text-[1.2rem]">
+                  <CheckSquare size={26} weight="fill" className="shrink-0 text-tape" /> {p}
                 </li>
               ))}
             </ul>
           </div>
         </section>
-        <Journey />
+        <div className="tape h-7 md:h-9" aria-hidden />
+        <Dispatch />
         <Reviews />
-        <Faq items={r.kind === "service" ? [...r.s.faq, ...faqs.slice(2, 4)] : faqs} light />
+        <Faq items={r.kind === "service" ? [...r.s.faq, ...faqs.slice(2, 4)] : faqs} />
         <Finale />
       </main>
       <Footer />

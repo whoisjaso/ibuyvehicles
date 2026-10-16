@@ -1,36 +1,36 @@
-import { Photo } from "./Photo";
+import { Phone } from "@phosphor-icons/react/dist/ssr";
 import { Emblem } from "./Emblem";
-import { Reveal } from "./Reveal";
 import { business, telHref } from "@/data/business";
-import { media } from "@/data/media";
 
-/** Authority with a face: the final offer comes from a person who answers his phone. */
+/*
+  Authority with a name. The portrait slot holds the emblem until Mark sends
+  a real photo (docs/IMAGE-BRIEF.md, R1). Never a generated person.
+*/
 export function MeetMark() {
   return (
-    <section className="band-paper section">
-      <div className="wrap grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-        <Reveal className="tile relative aspect-[4/5] bg-coal">
-          <Photo slot="mark" tone="night" sizes="(min-width:1024px) 50vw, 100vw" />
-          {!media.mark.src && (
-            <div className="absolute inset-0 grid place-items-center">
-              <Emblem size={180} spin />
-            </div>
-          )}
-        </Reveal>
-        <Reveal delay={0.1}>
-          <p className="eyebrow text-red">The Final Say Is A Person</p>
-          <h2 className="display display-lg mt-4">Meet {business.owner}.</h2>
-          <p className="lede mt-6 max-w-[52ch] text-coal-2">
-            The online estimate gets you a number in a minute. Then {business.owner} looks at the car, checks the VIN, and gives you a final offer face to face. That&apos;s the iBuy Vehicles way, and it&apos;s how it has worked since {business.since}.
+    <section className="py-[var(--section)]">
+      <div className="wrap grid items-center gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+        <div className="door grid aspect-[4/5] place-items-center">
+          <span className="beacon-cone -z-10 -right-1/2 -top-1/2 size-[200%] opacity-50" aria-hidden />
+          <Emblem size={220} spin className="size-40 sm:size-[220px]" />
+        </div>
+        <div>
+          <h2 className="vinyl vinyl-xl">
+            Mark Answers
+            <br />
+            His Own Phone.
+          </h2>
+          <p className="lede mt-7">
+            The estimate gets you a number in a minute. Then {business.owner} looks at the car, checks the VIN, and gives you the final offer himself. Same way since {business.since}.
           </p>
-          <blockquote className="mt-8 border-l-4 border-red pl-5 font-[family-name:var(--font-display)] text-2xl font-medium leading-snug">
+          <blockquote className="mt-9 max-w-[44ch] text-[1.2rem] leading-relaxed">
             &ldquo;I sent him some pictures of the vehicle and he was honest and upfront with the price.&rdquo;
-            <footer className="mt-2 font-sans text-sm font-normal text-coal-2">— Erika Moore, Google review</footer>
+            <footer className="mt-2 text-base text-ink-3">Erika Moore, on Google</footer>
           </blockquote>
-          <a href={telHref} className="btn btn-dark mt-10">
-            Call {business.owner}: {business.phoneDisplay}
+          <a href={telHref} className="decal decal-white mt-10">
+            <Phone size={20} weight="fill" /> {business.phoneDisplay}
           </a>
-        </Reveal>
+        </div>
       </div>
     </section>
   );

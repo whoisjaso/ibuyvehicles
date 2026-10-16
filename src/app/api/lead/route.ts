@@ -69,7 +69,7 @@ export async function POST(req: Request) {
       const r = await fetch(hook, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(lead) });
       if (!r.ok) throw new Error(`webhook ${r.status}`);
     } else if (key && to) {
-      const range = lead.estimate.low ? `$${lead.estimate.low}–$${lead.estimate.high}` : "no range";
+      const range = lead.estimate.low ? `$${lead.estimate.low} to $${lead.estimate.high}` : "no range";
       const r = await fetch("https://api.resend.com/emails", {
         method: "POST",
         headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" },

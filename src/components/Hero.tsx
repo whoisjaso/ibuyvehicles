@@ -1,140 +1,103 @@
 "use client";
 
 import Link from "next/link";
-import { motion, useScroll, useTransform } from "motion/react";
-import { useRef } from "react";
-import { Phone, ArrowDown, Car, Truck, Van, Motorcycle, Jeep } from "@phosphor-icons/react";
-import { Photo } from "./Photo";
-import { OfferCard } from "./OfferCard";
+import { motion, useReducedMotion } from "motion/react";
+import { Phone, ArrowRight } from "@phosphor-icons/react";
+import { Emblem } from "./Emblem";
 import { OpenNow } from "./OpenNow";
 import { business, telHref } from "@/data/business";
 
-const ease = [0.22, 1, 0.36, 1] as const;
-const quick = [
-  { body: "sedan", label: "Car", Icon: Car },
-  { body: "truck", label: "Truck", Icon: Truck },
-  { body: "suv", label: "SUV", Icon: Jeep },
-  { body: "van", label: "Van", Icon: Van },
-  { body: "motorcycle", label: "Motorcycle", Icon: Motorcycle },
-];
+const ease = [0.16, 1, 0.3, 1] as const;
 
-const trails = [
-  { top: "86%", d: "4.8s", delay: "0s", c: "red" },
-  { top: "89%", d: "6.2s", delay: "1.2s", c: "white" },
-  { top: "92%", d: "3.9s", delay: "2.1s", c: "red" },
-  { top: "84%", d: "7.1s", delay: "0.6s", c: "white" },
-  { top: "95%", d: "5.4s", delay: "3s", c: "white" },
-  { top: "90%", d: "4.4s", delay: "3.8s", c: "red" },
-];
-
+/*
+  First viewport: the truck door at night. Vinyl headline left, the painted
+  door panel right carrying the real door lettering (name, number, city, since),
+  the beacon sweeping both, the rear chevron tape along the bottom edge.
+*/
 export function Hero() {
-  const ref = useRef<HTMLElement>(null);
-  const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "18%"]);
-  const fade = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
+  const reduce = useReducedMotion();
+  const rise = (i: number) =>
+    reduce ? {} : { initial: { y: "100%" }, animate: { y: 0 }, transition: { delay: 0.15 + i * 0.09, duration: 0.9, ease } };
 
   return (
-    <section ref={ref} className="relative isolate min-h-[100svh] overflow-hidden">
-      <motion.div className="absolute inset-0 -z-10" style={{ y }}>
-        <motion.div className="absolute inset-0" initial={{ scale: 1.08 }} animate={{ scale: 1 }} transition={{ duration: 6, ease }}>
-          <div className="absolute inset-0 hidden md:block">
-            <Photo slot="hero" priority />
-          </div>
-          <div className="absolute inset-0 md:hidden">
-            <Photo slot="heroMobile" priority />
-          </div>
-        </motion.div>
-        <div className="trails hidden md:block">
-          {trails.map((t, i) => (
-            <span key={i} className={`trail ${t.c}`} style={{ top: t.top, ["--d" as string]: t.d, ["--delay" as string]: t.delay }} />
-          ))}
-        </div>
-        {/* Road horizon glow */}
-        <div className="absolute inset-x-0 bottom-0 h-[55%] bg-[radial-gradient(60%_60%_at_65%_100%,rgba(225,37,44,.22),transparent_70%)]" />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,8,11,.92)_0%,rgba(7,8,11,.55)_45%,rgba(7,8,11,.1)_75%)]" />
-        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-night to-transparent" />
-        <div className="grain" />
-      </motion.div>
+    <section className="relative isolate flex min-h-[100svh] flex-col overflow-hidden">
+      {/* Wet asphalt, sodium wash from below, beacon from the top right */}
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(90%_55%_at_70%_105%,rgba(255,158,48,.16),transparent_70%),radial-gradient(60%_50%_at_10%_0%,rgba(31,72,201,.14),transparent_70%)]" />
+      <div className="beacon-cone -z-10 left-[78%] top-[-30vmax] size-[150vmax] -translate-x-1/2 opacity-90 max-lg:left-[88%] max-lg:top-[-60vmax]" />
+      <div className="sweep -z-10 absolute inset-0 opacity-70" aria-hidden />
+      <div className="grain -z-10" />
 
-      <motion.div style={{ opacity: fade }} className="wrap relative flex min-h-[100svh] flex-col justify-end gap-10 pb-14 pt-28 lg:flex-row lg:items-end lg:justify-between lg:pb-24">
-        <div className="max-w-[880px]">
-          <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.8, ease }}>
-            <OpenNow className="mb-6 rounded-full bg-white/10 px-4 py-2 text-[13px] font-medium backdrop-blur-md" />
-          </motion.div>
-          <h1 className="display display-xl">
-            {["Sell It Today.", "Get Paid Today."].map((line, i) => (
-              <span key={line} className="block overflow-hidden pb-[0.06em]">
-                <motion.span
-                  className="block"
-                  initial={{ y: "105%" }}
-                  animate={{ y: 0 }}
-                  transition={{ delay: 0.35 + i * 0.12, duration: 1.1, ease }}
-                >
-                  {i === 1 ? (
-                    <>
-                      Get Paid <span className="text-red">Today.</span>
-                    </>
-                  ) : (
-                    line
-                  )}
+      <div className="wrap grid flex-1 items-center gap-10 pb-16 pt-28 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16 lg:pb-24 lg:pt-32">
+        <div>
+          <OpenNow className="mb-7 text-[15px] text-ink-2" />
+          <h1 className="vinyl vinyl-xl">
+            {["Cash", "Before", "The Tow."].map((w, i) => (
+              <span key={w} className="block overflow-hidden pb-[0.04em]">
+                <motion.span className={`block ${i === 2 ? "text-tape" : ""}`} {...rise(i)}>
+                  {w}
                 </motion.span>
               </span>
             ))}
           </h1>
-          <motion.p
-            className="lede mt-6 max-w-[560px] text-white/80"
-            initial={{ opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.75, duration: 0.9, ease }}
-          >
-            Running, junk, wrecked or no title. {business.owner} buys it as-is, tows it free and pays you before it leaves your driveway. Anywhere in {business.city}.
+          <motion.p className="lede mt-7" initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.55, duration: 0.8 }}>
+            Junk, wrecked, no title, won&apos;t start. {business.owner} pays you at the curb, then hooks it up. Often within {business.pickupWindow}.
           </motion.p>
-          <motion.div
-            className="mt-8 flex flex-col gap-3 sm:flex-row"
-            initial={{ opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.9, duration: 0.9, ease }}
-          >
-            <Link href="/offer" className="btn btn-cash shine text-lg">
-              Get My Cash Offer
+          <motion.div className="mt-9 flex flex-col gap-3 sm:flex-row" initial={reduce ? false : { opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7, duration: 0.7, ease }}>
+            <Link href="/offer" className="decal decal-red">
+              Get My Offer <ArrowRight size={20} weight="bold" />
             </Link>
-            <a href={telHref} className="btn btn-frost text-lg">
-              <Phone size={18} weight="fill" /> Call {business.owner}
+            <a href={telHref} className="decal decal-line">
+              <Phone size={20} weight="fill" /> Call {business.owner}
             </a>
-          </motion.div>
-          <motion.div className="mt-9" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.15, duration: 1 }}>
-            <p className="eyebrow mb-3 text-white/60">What Are You Selling?</p>
-            <div className="flex flex-wrap gap-2">
-              {quick.map(({ body, label, Icon }) => (
-                <Link key={body} href={`/offer?body=${body}`} className="chip">
-                  <Icon size={18} weight="duotone" /> {label}
-                </Link>
-              ))}
-            </div>
           </motion.div>
         </div>
 
-        <motion.div
-          className="hidden shrink-0 lg:block"
-          initial={{ opacity: 0, y: 40, rotate: 2 }}
-          animate={{ opacity: 1, y: 0, rotate: 0 }}
-          transition={{ delay: 1, duration: 1.2, ease }}
-        >
-          <div className="relative">
-            <div className="halo pointer-events-none absolute left-1/2 top-1/2 size-[560px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-60 blur-[1px]" />
-            <div className="pointer-events-none absolute left-1/2 top-1/2 size-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-red/20 blur-[90px]" />
-            <div className="relative">
-              <OfferCard />
-            </div>
-          </div>
+        <motion.div initial={reduce ? false : { opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.35, duration: 1.1, ease }}>
+          <DoorPanel />
         </motion.div>
-      </motion.div>
+      </div>
 
-      <a href="#ticker" aria-label="Scroll down" className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 text-white/60 lg:block">
-        <motion.span className="block" animate={{ y: [0, 8, 0] }} transition={{ repeat: Infinity, duration: 2.2 }}>
-          <ArrowDown size={22} />
-        </motion.span>
-      </a>
+      <div className="tape h-7 w-full md:h-9" aria-hidden />
     </section>
+  );
+}
+
+function DoorPanel() {
+  return (
+    <a href={telHref} aria-label={`Call ${business.name} at ${business.phoneDisplay}`} className="door group block">
+      {/* Window glass with the beacon passing across it */}
+      <span className="relative block h-[26%] min-h-[96px] overflow-hidden rounded-tr-[48px] bg-[linear-gradient(160deg,#1a2233_0%,#07090d_70%)] shadow-[inset_0_-2px_0_rgba(0,0,0,.6)]" aria-hidden>
+        <span className="sweep absolute inset-0" />
+        <span className="absolute inset-y-0 left-[18%] w-[22%] -skew-x-12 bg-white/[.05]" />
+      </span>
+      {/* Chrome beltline */}
+      <span className="block h-[5px] bg-[linear-gradient(90deg,#3b4352,#c9ced6_40%,#5d6573)]" aria-hidden />
+      <span className="relative block p-6 sm:p-9">
+        {/* Handle recess just under the beltline */}
+        <span className="absolute right-7 top-5 h-3.5 w-24 rounded-full bg-black/45 shadow-[inset_0_2px_3px_rgba(0,0,0,.7),0_1px_0_rgba(255,255,255,.1)]" aria-hidden />
+        <span className="flex items-center gap-4 pt-8">
+          <Emblem size={84} className="size-16 shrink-0 drop-shadow-[0_2px_1px_rgba(0,0,0,.45)] sm:size-[84px]" />
+          <span className="vinyl text-[clamp(2.4rem,5vw,4rem)] leading-[0.82] [text-shadow:0_2px_0_rgba(0,0,0,.35)]">
+            iBuy
+            <br />
+            Vehicles
+          </span>
+        </span>
+        <span className="vinyl mt-7 block text-[clamp(2.6rem,5.6vw,4.6rem)] tabular-nums tracking-[0.01em] text-white [text-shadow:0_2px_0_rgba(0,0,0,.35)] transition-colors group-hover:text-tape-hot">
+          {business.phoneDisplay}
+        </span>
+        <span className="mt-4 flex flex-wrap gap-x-6 gap-y-1 font-[family-name:var(--font-vinyl)] text-[1.15rem] font-bold uppercase tracking-[0.14em] text-white/85">
+          <span>Cash For Cars</span>
+          <span>Any Condition</span>
+        </span>
+        <span className="tape mt-8 block h-3 rounded-[1px]" aria-hidden />
+        <span className="mt-4 flex items-end justify-between font-[family-name:var(--font-vinyl)] text-[1rem] font-bold uppercase tracking-[0.16em] text-white/70">
+          <span>
+            {business.city}, {business.state}
+          </span>
+          <span>Since {business.since}</span>
+        </span>
+      </span>
+    </a>
   );
 }

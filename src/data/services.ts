@@ -56,7 +56,7 @@ export const services: Service[] = [
     title: "Same-Day Pickup & Payment",
     short: "Call today. Cash today.",
     lede: "From the first call to payment in hours, not weeks. In most of Houston the truck can be at your door within two to four hours, and you're paid at pickup.",
-    points: ["Pickup often within 2–4 hours", "Paid before it's towed", "Open 7 days a week", "No extra fee for same-day"],
+    points: ["Pickup often within 2 to 4 hours", "Paid before it's towed", "Open 7 days a week", "No extra fee for same-day"],
     faq: [
       { q: "Do I get paid before or after towing?", a: "Before. You're paid at pickup." },
       { q: "Is weekend service available?", a: "Yes, 7 days a week, 8 AM to 10 PM." },

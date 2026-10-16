@@ -1,4 +1,9 @@
 import type { NextConfig } from "next";
+import { pricing } from "./src/data/pricing";
+
+if (!pricing.confirmedByMark) {
+  console.warn("\n[iBuy Vehicles] Estimator prices in src/data/pricing.ts are PLACEHOLDERS. Mark must set them (then confirmedByMark: true) before launch.\n");
+}
 
 const nextConfig: NextConfig = {
   images: {

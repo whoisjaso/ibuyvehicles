@@ -6,7 +6,7 @@ The new ibuyvehicles.com: Houston's cash car buyer (Mark), rebuilt as a fast, an
 
 | Route | What it does |
 |---|---|
-| `/` | Hero with a live example estimate; "Which one is you?" cards that open the estimator already set up; a sticky scroll story (priced, confirmed, paid then towed); the title router; real cars; reviews; dealer and second-opinion bands; Meet Mark; what we buy; FAQ |
+| `/` | Night Tow Livery: "Cash Before The Tow." with the painted cab door (name and phone) under a sweeping amber beacon; the problem board ("What's wrong with it?") that opens the estimator preset; the pinned "One Evening In Houston" dispatch clock; title router; Google reviews; Mark's real photos; offer and dealer fields; Meet Mark; FAQ; the phone number as door lettering |
 | `/offer` | The instant offer: VIN lookup (NHTSA decode + open recalls) or year/make/model, then one question per screen, the estimate, and "Lock it in with Mark". Presets via `?body= &drive= &damage= &title= &situation=` |
 | `/dealers` | Aged inventory, direct to Mark |
 | `/about` | Story, numbers, Mark, reviews |
@@ -16,12 +16,16 @@ Every lead carries a `titleRoute` (`in-hand`, `not-in-name`, `lost`, `salvage`, 
 
 ## Before launch: Mark sets these
 
-1. **`src/data/pricing.ts`: the estimator's numbers.** The defaults are placeholders. Set the scrap price per ton and the base values to what Mark really pays, or set `showDollarRange: false` and the site says "Mark texts your number" instead of showing dollars.
+1. **`src/data/pricing.ts`: the estimator's numbers.** The defaults are placeholders, and every build prints a warning until `confirmedByMark` is `true`. Set the scrap price per ton and the base values to what Mark really pays, or set `showDollarRange: false` and the site says "Mark texts your number" instead of showing dollars.
 2. **`src/data/business.ts`**: confirm the address, hours, phone, pickup window and review count (all copied from the old site), and add the Google rating and legal name.
 3. **Lead delivery** (`.env.example`): `LEAD_WEBHOOK_URL` (n8n, Zapier, CRM, the future desk) or `RESEND_API_KEY` + `LEAD_TO_EMAIL`. With neither set, leads only print to the server log.
 4. **Optional AI review**: set `ANTHROPIC_API_KEY` and Claude adjusts the range within ±15% and explains what moves the number. Without it, the rules engine answers alone. If Claude declines or fails, the rules range stands.
 5. **The emblem** in `src/components/Emblem.tsx` is a vector redraw of the original logo (`public/brand/original-logo.png`). Mark should approve it.
-6. **Images**: see `docs/IMAGE-BRIEF.md`.
+6. **Images**: see `docs/IMAGE-BRIEF.md` (mostly real phone photos: Mark's portrait first).
+
+## Design
+
+The visual system is recorded in `DESIGN.md`; product truth lives in `PRODUCT.md`. The direction contract is the HTML comment at the top of `<body>` (`src/app/layout.tsx`).
 
 ## Develop
 

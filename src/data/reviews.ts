@@ -8,7 +8,7 @@ export const reviews = [
   {
     name: "Efrain Gonzalez",
     text: "Amazing person. Helped me out with the toughest car situation I've ever had. Made it happen all in 1-2 hours. Gave me a very fair price as well. Looking for a speedy solution, Mark is the guy.",
-    tag: "Done in 1–2 hours",
+    tag: "Done in 1 to 2 hours",
   },
   {
     name: "Brandon Landry",

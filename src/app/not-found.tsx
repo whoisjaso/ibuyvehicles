@@ -5,12 +5,11 @@ export default function NotFound() {
   return (
     <>
       <Header solid />
-      <main className="wrap grid min-h-[100svh] place-content-center text-center">
-        <p className="eyebrow text-red">404</p>
-        <h1 className="display display-lg mt-4">Wrong Turn.</h1>
-        <p className="lede mt-4 text-ink-2">That page is gone, but your car can be too.</p>
-        <Link href="/offer" className="btn btn-cash mx-auto mt-8">
-          Get My Cash Offer
+      <main className="wrap grid min-h-[100svh] content-center">
+        <h1 className="vinyl vinyl-xl">Wrong Turn.</h1>
+        <p className="lede mt-6">That page is gone. Your car can be too.</p>
+        <Link href="/offer" className="decal decal-red mt-9 self-start justify-self-start">
+          Get My Offer
         </Link>
       </main>
     </>

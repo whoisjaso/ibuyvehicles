@@ -3,69 +3,60 @@
 import Link from "next/link";
 import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
-import { CheckCircle, ArrowRight } from "@phosphor-icons/react";
+import { CheckSquare, ArrowRight } from "@phosphor-icons/react";
 import { titleRoutes, type TitleRoute } from "@/data/titleRoutes";
 
-/** "Do you have the title?" answered in one tap, with exactly what to have ready. */
+/** "Got the title?" answered in one tap, with exactly what to have ready on pickup day. */
 export function TitleRouter() {
-  const keys = Object.keys(titleRoutes) as TitleRoute[];
+  const keys = (Object.keys(titleRoutes) as TitleRoute[]).filter((k) => k !== "dealer");
   const [k, setK] = useState<TitleRoute>("lost");
   const r = titleRoutes[k];
   return (
-    <section className="band-paper section" id="title">
-      <div className="wrap grid gap-12 lg:grid-cols-[5fr_7fr] lg:gap-20">
-        <div>
-          <p className="eyebrow text-red">The Paperwork Question</p>
-          <h2 className="display display-lg mt-4">Do You Have The Title?</h2>
-          <p className="lede mt-6 max-w-[460px] text-coal-2">Whatever the answer, there&apos;s a path. Tap yours and see exactly what to have ready. No guessing, no tax-office detour.</p>
-          <div className="mt-8 flex flex-wrap gap-2" role="tablist" aria-label="Title situation">
-            {keys.map((key) => (
-              <button
-                key={key}
-                role="tab"
-                aria-selected={k === key}
-                onClick={() => setK(key)}
-                className={`btn !min-h-12 !px-5 text-base ${k === key ? "btn-dark" : "btn-ghost-dark"}`}
-              >
-                {titleRoutes[key].label}
-              </button>
-            ))}
-          </div>
-        </div>
-        <div className="relative min-h-[420px] overflow-hidden rounded-[28px] bg-coal p-7 text-white md:p-10">
-          <div className="absolute -right-24 -top-24 size-72 rounded-full bg-red/30 blur-3xl" />
-          <div className="absolute -bottom-24 -left-24 size-72 rounded-full bg-blue/30 blur-3xl" />
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={k}
-              className="relative"
-              initial={{ opacity: 0, x: 24 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -24 }}
-              transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+    <section id="title" className="py-[var(--section)]">
+      <div className="wrap">
+        <h2 className="vinyl vinyl-lg">Got The Title?</h2>
+        <p className="lede mt-5">Every answer has a way through. Pick yours and see what to have ready.</p>
+        <div className="mt-10 flex gap-2 overflow-x-auto pb-2 [scrollbar-width:none]" role="tablist" aria-label="Title situation">
+          {keys.map((key) => (
+            <button
+              key={key}
+              role="tab"
+              aria-selected={k === key}
+              onClick={() => setK(key)}
+              className={`decal shrink-0 !text-[1.1rem] ${k === key ? "decal-white" : "decal-line"}`}
             >
-              <p className="eyebrow text-white/50">{r.short}</p>
-              <h3 className="display display-md mt-3">{r.headline}</h3>
-              <p className="mt-8 text-sm font-semibold uppercase tracking-widest text-white/50">Have Ready</p>
-              <ul className="mt-4 space-y-3">
-                {r.bring.map((b, i) => (
-                  <motion.li
-                    key={b}
-                    className="flex items-start gap-3 text-lg"
-                    initial={{ opacity: 0, y: 8 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.15 + i * 0.08 }}
-                  >
-                    <CheckCircle size={24} weight="fill" className="mt-0.5 shrink-0 text-emerald-400" /> {b}
-                  </motion.li>
-                ))}
-              </ul>
-              <p className="mt-8 max-w-[52ch] text-white/70">{r.note}</p>
-              <Link href={k === "dealer" ? "/dealers" : `/offer?title=${k}`} className="btn btn-cash mt-8">
-                Get My Offer <ArrowRight size={18} weight="bold" />
-              </Link>
-            </motion.div>
-          </AnimatePresence>
+              {titleRoutes[key].label}
+            </button>
+          ))}
+        </div>
+        <div className="mt-6 grid overflow-hidden rounded-[14px] bg-asphalt-2 md:grid-cols-[0.9fr_1.1fr]">
+          <div className="relative flex min-h-[220px] flex-col justify-between gap-10 overflow-hidden bg-paint p-7 md:p-10">
+            <div className="tape absolute inset-x-0 top-0 h-3" aria-hidden />
+            <AnimatePresence mode="wait">
+              <motion.h3 key={k} className="vinyl vinyl-md" initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -16 }} transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}>
+                {r.headline}
+              </motion.h3>
+            </AnimatePresence>
+            <p className="font-[family-name:var(--font-vinyl)] text-[1.2rem] font-bold uppercase tracking-[0.12em] text-white/80">Free tow. Paid at pickup.</p>
+          </div>
+          <div className="p-7 md:p-10" role="tabpanel">
+            <h4 className="vinyl text-[1.9rem]">Have Ready On Pickup Day</h4>
+            <AnimatePresence mode="wait">
+              <motion.div key={k} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.25 }}>
+                <ul className="mt-5 space-y-4">
+                  {r.bring.map((b) => (
+                    <li key={b} className="flex items-start gap-3 text-[1.15rem]">
+                      <CheckSquare size={26} weight="fill" className="shrink-0 text-tape" /> {b}
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-7 max-w-[52ch] text-ink-2">{r.note}</p>
+              </motion.div>
+            </AnimatePresence>
+            <Link href={`/offer?title=${k}`} className="decal decal-red mt-8">
+              Get My Offer <ArrowRight size={20} weight="bold" />
+            </Link>
+          </div>
         </div>
       </div>
     </section>
