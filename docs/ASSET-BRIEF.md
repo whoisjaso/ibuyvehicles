@@ -174,7 +174,9 @@ These run beside the clock (6:12 PM, 6:25 PM, 8:40 PM). They are moments, not st
 
 ## L. Logo (ChatGPT explorations; the site already uses my vector redraw)
 
-The site now uses a precise vector emblem (`public/brand/emblem.svg`), which stays sharp at any zoom. Use these prompts to explore further directions with Mark. Whatever he picks, I redraw it as a final SVG, because a ChatGPT logo is a picture, not a vector.
+The site now uses a faithful vector replica of Mark's current logo (`public/brand/emblem-original.svg`, plus full lockups `logo-lockup-on-dark.svg`, `logo-lockup-on-light.svg` and `logo-full-on-dark.svg`), rebuilt from the original's measured geometry so it stays sharp at any zoom. A refined alternative emblem is in `public/brand/emblem.svg`. Use these prompts to explore further directions with Mark. Whatever he picks, I redraw it as a final SVG, because a ChatGPT logo is a picture, not a vector.
+
+The one part still raster is the cartoon mascot, because the original is only about 130 pixels tall. L05 below redraws him cleanly so he can be traced into a crisp vector.
 
 **Upload reference for all L prompts:** `public/brand/original-logo.png` (the current logo) and `public/brand/emblem.svg` exported as PNG from the brief page.
 
@@ -193,6 +195,16 @@ The site now uses a precise vector emblem (`public/brand/emblem.svg`), which sta
 ### L04: App icon / favicon
 
 > Place the attached emblem centred on a rounded-square app icon with a solid near-black #0E0E12 background, the emblem filling about 78% of the icon, perfectly flat, crisp, no gradients, no shadow, no text. Square 1024×1024.
+
+### L05: Mascot redraw (so he can become a vector)
+
+- **File:** `L05-mascot.png`
+- **Size:** 1024×1536 portrait, transparent or pure white background.
+- **Upload reference:** `public/brand/original-logo.png` with: *"Redraw only the cartoon man on the left of this logo."*
+
+> Redraw the cartoon businessman from the left side of the attached logo as a clean, high-resolution flat vector-style illustration, keeping him instantly recognisable: same pose (standing three-quarter view, left hand giving a thumbs-up at waist height, right arm extended palm-up as if presenting something to his right), same character (friendly middle-aged man, short neatly combed grey hair, thin rectangular glasses, warm open smile), same outfit (dark navy-blue suit, white shirt, solid red tie, black shoes). Style: crisp flat colour shapes with clean, smooth outlines and at most two tones of shading per colour, like a professional mascot drawn in Adobe Illustrator; no gradients, no texture, no photo realism, no shadow on the ground. Full figure head to toe, centred, generous margin, on a pure white background. No text, no logo, no other objects.
+
+**Check before sending:** same pose and outfit as the original; flat colours only; edges crisp at full size. I trace this into an SVG and drop it into `logo-full-on-dark.svg`.
 
 ---
 
@@ -234,6 +246,7 @@ These must be real. Shoot on the iPhone's main camera at 1x, in **Portrait mode*
 | D01, D02 | Discover tiles | Needed |
 | E01 | Finale | Needed |
 | L01 to L04 | Logo explorations | Optional |
+| L05 | Mascot redraw (for vector) | Wanted |
 | O01 | Share image | Needed |
 | R01 | Mark portrait | Needed (real) |
 | R02 to R04 | Real proof | Wanted (real) |

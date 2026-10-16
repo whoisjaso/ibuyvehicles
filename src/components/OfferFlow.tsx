@@ -448,7 +448,7 @@ function Reveal({ range, carName, ai, s, onLock }: { range: Estimate; carName: s
         <CheckCircle size={36} weight="fill" />
       </motion.div>
       <h1 className="t-1 mt-6">{carName}</h1>
-      <p className="mt-2 text-ink-2">Your instant estimate</p>
+      <p className="mt-2 text-ink-2">{showDollars ? "Your instant estimate" : `${business.owner} reviews it personally`}</p>
       <div className="mx-auto mt-6 rounded-[12px] bg-stone p-8">
         
         
@@ -461,7 +461,7 @@ function Reveal({ range, carName, ai, s, onLock }: { range: Estimate; carName: s
         ) : (
           <p className="t-1 relative">Mark Texts You His Number</p>
         )}
-        <p className="relative mt-4 text-sm text-ink-2">Estimated cash range · free tow included · paid at pickup</p>
+        <p className="relative mt-4 text-sm text-ink-2">{showDollars ? "Estimated cash range. Free tow included, paid at pickup." : "Free tow included, paid at pickup."}</p>
         <AnimatePresence>
           {ai?.headline && (
             <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} className="relative mt-6 rounded-[4px] bg-paper p-4 text-left">
@@ -545,7 +545,15 @@ function Lock({ s, range, ai, carName, onDone }: { s: State; range: Estimate; ai
     <form onSubmit={submit}>
       <h1 className="t-1">Where Should {business.owner} Reach You?</h1>
       <p className="mt-3 text-ink-2">
-        Your {carName} estimate is saved: <strong className="text-ink">{showDollars ? `${money(range.low)} to ${money(range.high)}` : "pending"}</strong>. {business.owner} reviews it personally.
+        {showDollars ? (
+          <>
+            Your {carName} estimate is saved: <strong className="text-ink">{`${money(range.low)} to ${money(range.high)}`}</strong>. {business.owner} reviews it personally.
+          </>
+        ) : (
+          <>
+            Your {carName} details are saved. {business.owner} reviews them personally.
+          </>
+        )}
       </p>
       <div className="mt-7 space-y-3">
         <input className="field" placeholder="First name" autoComplete="given-name" value={name} onChange={(e) => setName(e.target.value)} required />
