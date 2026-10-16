@@ -13,7 +13,7 @@ export function Photo({ slot, priority = false, sizes = "100vw", className = "" 
     return (
       <Image
         src={src}
-        alt={m.alt}
+        alt={m.src ? m.alt : "A car bought by iBuy Vehicles"}
         fill
         priority={priority}
         sizes={sizes}
@@ -23,5 +23,5 @@ export function Photo({ slot, priority = false, sizes = "100vw", className = "" 
       />
     );
   }
-  return <div role="img" aria-label={m.alt} className={`absolute inset-0 ${m.tone ?? "studio"} ${className}`} />;
+  return <div aria-hidden className={`absolute inset-0 ${m.tone ?? "studio"} ${className}`} />;
 }

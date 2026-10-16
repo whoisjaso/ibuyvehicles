@@ -4,7 +4,6 @@ import Link from "next/link";
 import { motion, useReducedMotion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import { Photo } from "./Photo";
-import { OpenNow } from "./OpenNow";
 import { business, telHref } from "@/data/business";
 
 const ease = [0.16, 1, 0.3, 1] as const;
@@ -36,8 +35,7 @@ export function Hero() {
 
       <div className="wrap flex h-full flex-col justify-end pb-12 md:pb-16">
         <motion.div initial={reduce ? false : { opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 1.1, ease }} className="max-w-[760px]">
-          <OpenNow className="text-[15px] text-white/75" />
-          <h1 className="t-hero mt-4">Cash Before The Tow.</h1>
+          <h1 className="t-hero">Cash Before The Tow.</h1>
           <p className="mt-5 max-w-[46ch] text-[1.12rem] leading-relaxed text-white/85">
             Running or not, title or not. {business.owner} pays you at the curb, then tows it free. Often within {business.pickupWindow}.
           </p>

@@ -45,6 +45,10 @@ export const pricing = {
   minimumHigh: 150,
 } as const;
 
+/** Dollars show in production only after Mark confirms the numbers, or on a preview deploy that opts in. */
+export const showDollars =
+  pricing.showDollarRange && (pricing.confirmedByMark || process.env.NEXT_PUBLIC_SHOW_PLACEHOLDER_PRICES === "1" || process.env.NODE_ENV !== "production");
+
 export type BodyClass = keyof typeof pricing.weightTons;
 export type DriveState = keyof typeof pricing.drive;
 export type DamageState = keyof typeof pricing.damage;

@@ -28,7 +28,7 @@ import {
   CarProfile,
 } from "@phosphor-icons/react";
 import { estimate, money, type Estimate } from "@/lib/estimate";
-import { pricing, type BodyClass, type DamageState, type DriveState } from "@/data/pricing";
+import { pricing, showDollars, type BodyClass, type DamageState, type DriveState } from "@/data/pricing";
 import { titleRoutes, type TitleRoute } from "@/data/titleRoutes";
 import { business, smsHref, telHref } from "@/data/business";
 
@@ -452,14 +452,14 @@ function Reveal({ range, carName, ai, s, onLock }: { range: Estimate; carName: s
       <div className="mx-auto mt-6 rounded-[12px] bg-stone p-8">
         
         
-        {pricing.showDollarRange ? (
+        {showDollars ? (
           <p className="relative whitespace-nowrap text-[clamp(2.4rem,10vw,4.75rem)] font-light leading-none tracking-[-0.035em] tabular-nums">
             <Rise to={range.low} />
             <span className="px-2 text-ink-3">to</span>
             <Rise to={range.high} delay={0.15} />
           </p>
         ) : (
-          <p className="t-1 relative">Mark Texts Your Number Within The Hour</p>
+          <p className="t-1 relative">Mark Texts You His Number</p>
         )}
         <p className="relative mt-4 text-sm text-ink-2">Estimated cash range · free tow included · paid at pickup</p>
         <AnimatePresence>
@@ -545,7 +545,7 @@ function Lock({ s, range, ai, carName, onDone }: { s: State; range: Estimate; ai
     <form onSubmit={submit}>
       <h1 className="t-1">Where Should {business.owner} Reach You?</h1>
       <p className="mt-3 text-ink-2">
-        Your {carName} estimate is saved: <strong className="text-ink">{pricing.showDollarRange ? `${money(range.low)} to ${money(range.high)}` : "pending"}</strong>. {business.owner} reviews it personally.
+        Your {carName} estimate is saved: <strong className="text-ink">{showDollars ? `${money(range.low)} to ${money(range.high)}` : "pending"}</strong>. {business.owner} reviews it personally.
       </p>
       <div className="mt-7 space-y-3">
         <input className="field" placeholder="First name" autoComplete="given-name" value={name} onChange={(e) => setName(e.target.value)} required />

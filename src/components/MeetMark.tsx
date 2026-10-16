@@ -1,8 +1,6 @@
 import { Phone } from "@phosphor-icons/react/dist/ssr";
 import { Photo } from "./Photo";
-import { Emblem } from "./Emblem";
 import { business, telHref } from "@/data/business";
-import { media } from "@/data/media";
 
 /** The final say is a person. Portrait slot R01 is Mark's real photo only; the emblem holds it until then. */
 export function MeetMark() {
@@ -11,11 +9,6 @@ export function MeetMark() {
       <div className="wrap grid items-center gap-12 lg:grid-cols-2 lg:gap-24">
         <div className="tile aspect-[4/5]">
           <Photo slot="mark" sizes="(min-width:1024px) 45vw, 100vw" />
-          {!media.mark.src && (
-            <div className="absolute inset-0 grid place-items-center">
-              <Emblem size={200} spin className="size-36 opacity-90 sm:size-[200px]" />
-            </div>
-          )}
         </div>
         <div>
           <h2 className="t-1">The Final Word Comes From {business.owner}.</h2>
