@@ -243,7 +243,7 @@ These must be real. Shoot on the iPhone's main camera at 1x, in **Portrait mode*
 | A02 | Hero, phone | Done, on the site |
 | B01 to B06 | Range tiles | Done, on the site |
 | C01 | One Evening: send | Done, on the site |
-| C02, C03 | One Evening: call, paid | Regenerate with the Night Studio block, 4:5 portrait |
+| C02, C03 | One Evening: call, paid | On the site from the first round, cooled and cropped tall; a 4:5 Night Studio regeneration would replace them |
 | D01 | Discover tile: offer | Done, on the site |
 | D02 | Discover tile: dealers | Done, on the site |
 | E01 | Finale | Needed |
