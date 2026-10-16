@@ -239,12 +239,12 @@ These must be real. Shoot on the iPhone's main camera at 1x, in **Portrait mode*
 
 | Code | Image | Status |
 |---|---|---|
-| A01 | Hero, desktop | Generated; needs to reach the site (resend as a fresh message) |
-| A02 | Hero, phone | Generated; needs to reach the site (resend as a fresh message) |
-| B01 to B05 | Range tiles | Done, on the site |
-| B06 | Dealer units | Generated, approved; resend as a fresh message |
-| C01 to C03 | One Evening | Regenerate with the Night Studio block, 4:5 portrait |
-| D01 | Discover tile: offer | Generated; resend as a fresh message |
+| A01 | Hero, desktop | Done, on the site |
+| A02 | Hero, phone | Done, on the site |
+| B01 to B06 | Range tiles | Done, on the site |
+| C01 | One Evening: send | Done, on the site |
+| C02, C03 | One Evening: call, paid | Regenerate with the Night Studio block, 4:5 portrait |
+| D01 | Discover tile: offer | Done, on the site |
 | D02 | Discover tile: dealers | Done, on the site |
 | E01 | Finale | Needed |
 | L01 to L04 | Logo explorations | Three in docs/brand-explorations for Mark to pick; the pick gets redrawn as SVG |

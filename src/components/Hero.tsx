@@ -20,14 +20,16 @@ export function Hero() {
   const y = useTransform(scrollYProgress, [0, 1], ["0%", reduce ? "0%" : "14%"]);
 
   return (
-    <section ref={ref} className="on-night relative isolate h-[100svh] min-h-[600px] overflow-hidden bg-night text-white">
+    <section ref={ref} className="on-night relative isolate h-[100svh] min-h-[600px] overflow-hidden bg-black text-white">
       <motion.div className="absolute inset-0 -z-10" style={{ y }}>
         <motion.div className="absolute inset-0" initial={reduce ? false : { scale: 1.06 }} animate={{ scale: 1 }} transition={{ duration: 6, ease }}>
           <div className="absolute inset-0 hidden md:block">
             <Photo slot="hero" priority />
           </div>
-          <div className="absolute inset-0 md:hidden">
+          {/* Phones: the photo holds the top of the screen so the car clears the headline. */}
+          <div className="absolute inset-x-0 top-0 h-[80%] md:hidden">
             <Photo slot="heroMobile" priority />
+            <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-b from-transparent to-black" />
           </div>
         </motion.div>
       </motion.div>
@@ -35,7 +37,10 @@ export function Hero() {
 
       <div className="wrap flex h-full flex-col justify-end pb-12 md:pb-16">
         <motion.div initial={reduce ? false : { opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 1.1, ease }} className="max-w-[760px]">
-          <h1 className="t-hero">Cash Before The Tow.</h1>
+          <h1 className="t-hero">
+            Cash Before <br />
+            The Tow.
+          </h1>
           <p className="mt-5 max-w-[46ch] text-[1.12rem] leading-relaxed text-white/85">
             Junk, wrecked, no title, won&apos;t start. {business.owner} makes the offer himself, pays you on the spot, and tows it free. Often within {business.pickupWindow}.
           </p>

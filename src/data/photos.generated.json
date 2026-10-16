@@ -1,8 +1,13 @@
 {
+  "A01": "/photos/A01-hero.webp",
+  "A02": "/photos/A02-hero-phone.webp",
   "B01": "/photos/B01-wont-start.webp",
   "B02": "/photos/B02-no-title.webp",
   "B03": "/photos/B03-wrecked.webp",
   "B04": "/photos/B04-flooded.webp",
   "B05": "/photos/B05-runs-fine.webp",
+  "B06": "/photos/B06-dealer-units.webp",
+  "C01": "/photos/C01-send.webp",
+  "D01": "/photos/D01-offer.webp",
   "D02": "/photos/D02-dealers.webp"
 }
