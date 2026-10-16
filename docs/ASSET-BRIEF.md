@@ -239,10 +239,11 @@ These must be real. Shoot on the iPhone's main camera at 1x, in **Portrait mode*
 
 | Code | Image | Status |
 |---|---|---|
-| A01 | Hero, desktop | Needed |
-| A02 | Hero, phone | Needed |
-| B01 to B06 | Range tiles | Needed |
-| C01 to C03 | One Evening | Needed |
+| A01 | Hero, desktop | Generated; needs to reach the site (resend as a fresh message) |
+| A02 | Hero, phone | Generated; needs to reach the site (resend as a fresh message) |
+| B01 to B05 | Range tiles | Done, on the site |
+| B06 | Dealer units | Generated, approved; resend as a fresh message |
+| C01 to C03 | One Evening | Regenerate with the Night Studio block, 4:5 portrait |
 | D01, D02 | Discover tiles | Needed |
 | E01 | Finale | Needed |
 | L01 to L04 | Logo explorations | Optional |
@@ -251,4 +252,4 @@ These must be real. Shoot on the iPhone's main camera at 1x, in **Portrait mode*
 | R01 | Mark portrait | Needed (real) |
 | R02 to R04 | Real proof | Wanted (real) |
 
-Until each image arrives, its slot shows either Mark's original photo in black and white (A01, A02, B01, B03, B05, C03) or an empty studio backdrop.
+Images go in `public/photos/` named by code; `scripts/sync-photos.mjs` places them on the next build. Until each image arrives, its slot shows either Mark's original photo in black and white (A01, A02, B01, B03, B05, C03) or an empty studio backdrop.
