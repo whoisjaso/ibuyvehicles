@@ -244,10 +244,11 @@ These must be real. Shoot on the iPhone's main camera at 1x, in **Portrait mode*
 | B01 to B05 | Range tiles | Done, on the site |
 | B06 | Dealer units | Generated, approved; resend as a fresh message |
 | C01 to C03 | One Evening | Regenerate with the Night Studio block, 4:5 portrait |
-| D01, D02 | Discover tiles | Needed |
+| D01 | Discover tile: offer | Generated; resend as a fresh message |
+| D02 | Discover tile: dealers | Done, on the site |
 | E01 | Finale | Needed |
-| L01 to L04 | Logo explorations | Optional |
-| L05 | Mascot redraw (for vector) | Wanted |
+| L01 to L04 | Logo explorations | Three in docs/brand-explorations for Mark to pick; the pick gets redrawn as SVG |
+| L05 | Mascot redraw (for vector) | Done: public/brand/mascot.svg, in logo-full-on-dark.svg |
 | O01 | Share image | Needed |
 | R01 | Mark portrait | Needed (real) |
 | R02 to R04 | Real proof | Wanted (real) |

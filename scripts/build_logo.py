@@ -91,13 +91,10 @@ out='public/brand/'
 # Lockup without mascot (vector), starting where the wordmark begins.
 open(out+'logo-lockup-on-dark.svg','w').write(svg(lockup('#ffffff'),'60 4 452 116'))
 open(out+'logo-lockup-on-light.svg','w').write(svg(lockup('#0e0e12'),'60 4 452 116'))
-# Full lockup including the original mascot, embedded as the original raster until it is redrawn.
-import base64
-from PIL import Image
-im=Image.open(out+'original-logo.png').convert('RGBA').crop((0,0,64,138))
-im.save('/tmp/mascot-crop.png')
-b64=base64.b64encode(open('/tmp/mascot-crop.png','rb').read()).decode()
-open(out+'logo-full-on-dark.svg','w').write(svg(f'<image href="data:image/png;base64,{b64}" x="0" y="0" width="64" height="138"/>'+lockup('#ffffff'),'0 4 512 134'))
+# Full lockup with the mascot, traced to vector (public/brand/mascot.svg, from L05).
+import re
+mascot=re.sub(r'^<svg[^>]*>|</svg>\s*$','',open(out+'mascot.svg').read().strip())
+open(out+'logo-full-on-dark.svg','w').write(svg(f'<svg x="0" y="4" width="64" height="134" viewBox="0 0 894 1474" preserveAspectRatio="xMidYMax meet">{mascot}</svg>'+lockup('#ffffff'),'0 4 512 134'))
 # Emblem alone, exact replica.
 open(out+'emblem-original.svg','w').write(svg(emblem,'60 36 610 455'))
 print('written')
