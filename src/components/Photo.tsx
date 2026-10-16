@@ -29,7 +29,7 @@ export function Photo({ slot, priority = false, sizes = "100vw", className = "" 
   return (
     <div aria-hidden className={`absolute inset-0 grid place-items-center ${m.tone ?? "studio"} ${className}`}>
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src="/brand/emblem-original.svg" alt="" className={`w-[38%] max-w-[260px] ${m.tone === "studio-night" ? "opacity-[.14]" : "opacity-[.18] mix-blend-multiply"}`} />
+      <img src="/brand/emblem-clean.svg" alt="" className={`w-[30%] max-w-[260px] ${m.tone === "studio-night" ? "opacity-[.14]" : "opacity-[.18] mix-blend-multiply"}`} />
     </div>
   );
 }
