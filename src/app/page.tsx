@@ -5,7 +5,7 @@ import { Different } from "@/components/Different";
 import { Evening } from "@/components/Evening";
 import { BuildBand } from "@/components/BuildBand";
 import { TitleRouter } from "@/components/TitleRouter";
-import { Reviews } from "@/components/Reviews";
+import { ReviewWall } from "@/components/ReviewWall";
 import { MeetMark } from "@/components/MeetMark";
 import { Discover } from "@/components/Discover";
 import { Faq } from "@/components/Faq";
@@ -24,7 +24,7 @@ export default function Home() {
         <Evening />
         <TitleRouter />
         <BuildBand />
-        <Reviews />
+        <ReviewWall />
         <MeetMark />
         <Discover />
         <Faq items={faqs} />

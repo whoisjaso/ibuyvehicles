@@ -1,4 +1,7 @@
-// PUBLIC: Google reviews shown on ibuyvehicles.com (Trustindex widget), copied verbatim on 2026-10-16.
+// PUBLIC: Google reviews (5 stars each) shown on ibuyvehicles.com through its Trustindex
+// widget, copied verbatim on 2026-10-16. Google place ID: ChIJT0W1v3jPQIYRx3B_QgKHv4M.
+// Add more real reviews here as they are exported from Mark's Google Business Profile;
+// the review wall picks them up automatically. Never edit a review's words.
 export const reviews = [
   {
     name: "Erika Moore",
@@ -34,6 +37,11 @@ export const reviews = [
     name: "TheBoyDaryl",
     text: "I was looking to sell my car fast and ran across these guys! Great service highly recommended!",
     tag: "Sold fast",
+  },
+  {
+    name: "Mikey Evans",
+    text: "Needed a car very great service helped me find something and helped me with everything I needed to do great experience thanks again",
+    tag: "Great experience",
   },
   {
     name: "Ndudiri Ikegwuruka",

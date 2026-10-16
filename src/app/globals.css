@@ -305,6 +305,30 @@ p {
     background: var(--stone);
   }
 
+  /* Review wheel: each column holds its cards four times and rolls by half its
+     height (two full sets), so the loop never shows a seam. */
+  .wheel-col {
+    height: 100%;
+    overflow: hidden;
+  }
+  .wheel-track {
+    animation-name: wheel;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  .wheel-col:hover .wheel-track,
+  .wheel-col:focus-within .wheel-track {
+    animation-play-state: paused;
+  }
+  @keyframes wheel {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(calc(-50% - 8px));
+    }
+  }
+
   .emblem-spin {
     transform-origin: 60px 60px;
     animation: emblem 24s linear infinite;

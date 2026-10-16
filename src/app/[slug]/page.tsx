@@ -6,7 +6,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Faq } from "@/components/Faq";
 import { Evening } from "@/components/Evening";
-import { Reviews } from "@/components/Reviews";
+import { ReviewWall } from "@/components/ReviewWall";
 import { Finale } from "@/components/Finale";
 import { services, areas, faqs } from "@/data/services";
 import { business, telHref } from "@/data/business";
@@ -74,7 +74,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           </div>
         </section>
         <Evening />
-        <Reviews />
+        <ReviewWall />
         <Faq items={r.kind === "service" ? [...r.s.faq, ...faqs.slice(2, 4)] : faqs} />
         <Finale />
       </main>

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { MeetMark } from "@/components/MeetMark";
-import { Reviews } from "@/components/Reviews";
+import { ReviewWall } from "@/components/ReviewWall";
 import { Finale } from "@/components/Finale";
 import { business } from "@/data/business";
 
@@ -25,7 +25,7 @@ export default function About() {
           </div>
         </section>
         <MeetMark />
-        <Reviews />
+        <ReviewWall />
         <Finale />
       </main>
       <Footer />
