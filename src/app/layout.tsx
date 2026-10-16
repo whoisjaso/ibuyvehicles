@@ -7,6 +7,7 @@ import "@fontsource/hanken-grotesk/600.css";
 import "./globals.css";
 import { MotionProvider } from "@/components/MotionProvider";
 import { MobileDock } from "@/components/MobileDock";
+import { MarkChat } from "@/components/MarkChat";
 import { business } from "@/data/business";
 
 const pixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID;
@@ -70,6 +71,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <MotionProvider>
           {children}
           <MobileDock />
+          <MarkChat />
         </MotionProvider>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         {pixelId && (

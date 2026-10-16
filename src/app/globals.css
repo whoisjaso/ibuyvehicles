@@ -329,6 +329,24 @@ p {
     }
   }
 
+  /* A soft studio light that passes over the hero car, then waits. */
+  .hero-sweep {
+    background: linear-gradient(105deg, transparent 38%, rgba(255, 255, 255, 0.1) 47%, rgba(255, 255, 255, 0.16) 50%, rgba(255, 255, 255, 0.1) 53%, transparent 62%);
+    background-size: 250% 100%;
+    background-position: 130% 0;
+    mix-blend-mode: soft-light;
+    animation: sweep 9s var(--ease) 1.2s infinite;
+  }
+  @keyframes sweep {
+    0% {
+      background-position: 130% 0;
+    }
+    30%,
+    100% {
+      background-position: -30% 0;
+    }
+  }
+
   .emblem-spin {
     transform-origin: 60px 60px;
     animation: emblem 24s linear infinite;

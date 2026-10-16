@@ -1,9 +1,10 @@
 "use client";
 
-import { useReducedMotion } from "motion/react";
+import { motion, useReducedMotion } from "motion/react";
 import { Star, GoogleLogo } from "@phosphor-icons/react";
 import { reviews } from "@/data/reviews";
 import { business } from "@/data/business";
+import { MarkFull } from "./MarkAvatar";
 
 /*
   The review wheel: every real Google review on file, in columns that roll
@@ -54,6 +55,26 @@ export function ReviewWall() {
           >
             Read Them On Google
           </a>
+          {/* Mark presents the wall. */}
+          <div className="mt-12 flex items-start gap-1">
+            <motion.div
+              initial={reduce ? false : { opacity: 0, x: -24 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ type: "spring", stiffness: 160, damping: 18 }}
+            >
+              <MarkFull mood="point" className="h-[170px] w-auto md:h-[230px]" />
+            </motion.div>
+            <motion.p
+              initial={reduce ? false : { opacity: 0, scale: 0.8, y: 8 }}
+              whileInView={{ opacity: 1, scale: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ delay: 0.45, type: "spring", stiffness: 260, damping: 18 }}
+              className="mt-6 max-w-[200px] origin-bottom-left rounded-[16px] rounded-bl-[4px] bg-paper px-4 py-3 text-[15px] leading-snug shadow-[0_10px_30px_-16px_rgba(10,22,64,.45)] ring-1 ring-rule"
+            >
+              Don&apos;t take my word for it. <span className="font-semibold">Take theirs.</span>
+            </motion.p>
+          </div>
         </div>
 
         {reduce ? (

@@ -208,6 +208,31 @@ The one part still raster is the cartoon mascot, because the original is only ab
 
 ---
 
+## M. Mark's expressions (one chat, upload the mascot as reference)
+
+The site now uses Mark everywhere a person would talk: the hero, his three-question chat, the review wall, the phone dock. Each moment asks for a mood; until that mood's drawing exists he uses his presenting pose. Send them in this chat; I cut out the white background, name them as below in `public/brand/mark/`, and they appear on the next build.
+
+**How to run:** start one new chat. Upload `docs/brand-explorations/L05-mascot-source.webp` (the redraw you already made). Send the BASE block plus the first pose. For every next pose, send only: *"Same character, same style, same outfit, same proportions. New pose:"* plus the pose line.
+
+**BASE (send with the first pose):**
+
+> This exact cartoon character from the attached image, redrawn in exactly the same flat vector illustration style: same face, grey hair, rectangular glasses, navy suit, white shirt, red tie, black shoes, same line weight and soft cel shading, same proportions. Full body, head to shoes, centred, on a pure white background (#FFFFFF) with no shadow, no floor, no props unless described, no text. Square canvas 1536×1536, the character about 85% of the canvas height. Friendly, warm, trustworthy, a man who buys your car and pays you on the spot.
+
+| File | Mood | Pose line |
+|---|---|---|
+| `wave.png` | Hello | Waving hello with his right hand raised at shoulder height, palm out, big warm open smile, left hand relaxed at his side. |
+| `hello.png` | Listening | Leaning slightly forward, head tilted a little, eyebrows raised, kind attentive smile, both hands clasped loosely in front of his waist. |
+| `thinking.png` | Thinking | One hand on his chin, the other arm folded across his chest, eyes glancing up and to the side, a small knowing smile. |
+| `thumbs.png` | Got it | Both thumbs up at chest height, eyes closed in a happy grin, shoulders slightly raised. |
+| `point.png` | Look at this | Pointing with his whole right arm extended to the right of the frame, index finger out, looking toward where he points, mouth open mid-sentence. |
+| `phone.png` | On the phone | Holding a plain black smartphone to his right ear, left hand gesturing open, smiling as if saying good news. The phone screen shows nothing. |
+| `cash.png` | Paid | Holding a neat fan of plain green banknotes out toward the viewer with both hands, proud happy smile. The notes show no numbers, faces or text. |
+| `celebrate.png` | Done | Both fists raised in celebration, one knee slightly lifted, laughing. |
+
+**Check before sending:** same face and glasses every time, white background, nothing cut off at the feet or hands.
+
+---
+
 ## O. Social share image
 
 ### O01: Link preview (Facebook, Google, text messages)
@@ -246,9 +271,10 @@ These must be real. Shoot on the iPhone's main camera at 1x, in **Portrait mode*
 | C02, C03 | One Evening: call, paid | On the site from the first round, cooled and cropped tall; a 4:5 Night Studio regeneration would replace them |
 | D01 | Discover tile: offer | Done, on the site |
 | D02 | Discover tile: dealers | Done, on the site |
-| E01 | Finale | Needed |
+| E01 | Finale | Done, on the site |
 | L01 to L04 | Logo explorations | Three in docs/brand-explorations for Mark to pick; the pick gets redrawn as SVG |
 | L05 | Mascot redraw (for vector) | Done: public/brand/mascot.svg, in logo-full-on-dark.svg |
+| M: wave, hello, thinking, thumbs, point, phone, cash, celebrate | Mark's expressions | Needed (site falls back to his presenting pose) |
 | O01 | Share image | Needed |
 | R01 | Mark portrait | Needed (real) |
 | R02 to R04 | Real proof | Wanted (real) |

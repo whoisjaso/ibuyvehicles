@@ -16,3 +16,18 @@ let prev = "";
 try { prev = readFileSync(out, "utf8"); } catch {}
 if (prev !== next) writeFileSync(out, next);
 console.log(`photos: ${Object.keys(found).join(", ") || "none placed yet"}`);
+
+// Mark's expressions: public/brand/mark/<mood>.(png|webp|svg), e.g. wave.png,
+// thinking.webp. full.svg and bust.svg are the default pose and are skipped.
+const markDir = new URL("../public/brand/mark/", import.meta.url);
+const markOut = new URL("../src/data/mark.generated.json", import.meta.url);
+const moods = {};
+for (const f of readdirSync(markDir).sort()) {
+  const m = f.match(/^([a-z-]+)\.(png|webp|svg|avif)$/i);
+  if (m && !["full", "bust"].includes(m[1].toLowerCase())) moods[m[1].toLowerCase()] ??= `/brand/mark/${f}`;
+}
+const nextMoods = JSON.stringify(moods, null, 2) + "\n";
+let prevMoods = "";
+try { prevMoods = readFileSync(markOut, "utf8"); } catch {}
+if (prevMoods !== nextMoods) writeFileSync(markOut, nextMoods);
+console.log(`mark: ${Object.keys(moods).join(", ") || "default pose only"}`);
