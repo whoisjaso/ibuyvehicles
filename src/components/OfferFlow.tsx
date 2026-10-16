@@ -515,7 +515,7 @@ function Reveal({ range, carName, ai, s, onLock }: { range: Estimate; carName: s
           </p>
         ) : null}
       </div>
-      <button onClick={onLock} className="btn btn-ink mt-8 w-full text-lg">
+      <button onClick={onLock} className="btn btn-red mt-8 w-full text-lg">
         <Lightning size={18} weight="fill" /> Lock It In With {business.owner}
       </button>
       <p className="mt-4 text-sm text-ink-3">This is an estimate, not an offer. {business.owner} confirms the final number after a quick look at the vehicle.</p>
@@ -599,7 +599,7 @@ function Lock({ s, range, ai, carName, onDone }: { s: State; range: Estimate; ai
         <textarea className="field !min-h-24 py-4" placeholder="Anything Mark should know? (optional)" value={notes} onChange={(e) => setNotes(e.target.value)} />
         <input tabIndex={-1} autoComplete="off" className="hidden" aria-hidden value={hp} onChange={(e) => setHp(e.target.value)} name="company" />
       </div>
-      <button disabled={state === "sending" || !name.trim() || digits.length < 10} className="btn btn-ink mt-6 w-full text-lg disabled:opacity-40">
+      <button disabled={state === "sending" || !name.trim() || digits.length < 10} className="btn btn-red mt-6 w-full text-lg disabled:opacity-40">
         {state === "sending" ? "Sending…" : "Send To Mark"}
       </button>
       {state === "error" && (

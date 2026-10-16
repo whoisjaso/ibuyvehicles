@@ -110,7 +110,7 @@ export const areas = [
 
 export const faqs = [
   { q: "Will the price change when the truck shows up?", a: "Mark makes the final offer himself after a quick look, before anything is loaded. Tell him up front about anything missing or replaced, like the catalytic converter, and there is nothing left to surprise anyone at the curb. You never have to sell." },
-  { q: "Cash or check? Paid before or after it's loaded?", a: "Cash on the spot, before the car is towed." },
+  { q: "Cash or check? Paid before or after it's loaded?", a: "You are paid on the spot, before the car is towed. No waiting on a check, no money days later." },
   { q: "What if there's still a loan on it?", a: "Tell Mark when you send the car. He will tell you exactly what's needed before he drives out, so nothing stalls on pickup day." },
   { q: "Who stops the toll bills after I sell?", a: "Take your plates and toll tag off, and file a Vehicle Transfer Notification with TxDMV within 30 days. It protects you from the next owner's tolls and tickets. Mark can show you how." },
   { q: "What types of vehicles do you buy?", a: "Cars, trucks, SUVs, motorcycles, RVs and even boats. Running or not, you get a fair cash offer." },

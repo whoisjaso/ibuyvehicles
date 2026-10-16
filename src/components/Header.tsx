@@ -42,7 +42,7 @@ export function Header({ solid = false }: { solid?: boolean }) {
             <a href={telHref} className="hidden items-center gap-2 text-[15px] font-medium md:inline-flex">
               <Phone size={18} /> {business.phoneDisplay}
             </a>
-            <Link href="/offer" className={`btn btn-ink hidden !min-h-11 !px-5 text-[15px] ${light ? "" : "lg:inline-flex"}`}>
+            <Link href="/offer" className={`btn btn-red hidden !min-h-11 !px-5 text-[15px] ${light ? "" : "lg:inline-flex"}`}>
               Get My Offer
             </Link>
             <a href={telHref} className="grid size-11 place-items-center md:hidden" aria-label="Call Mark">

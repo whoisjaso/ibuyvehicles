@@ -45,7 +45,7 @@ export function TitleRouter() {
                 ))}
               </ul>
               <p className="mt-6 max-w-[54ch] text-ink-2">{r.note}</p>
-              <Link href={`/offer?title=${k}`} className="btn btn-ink mt-10">
+              <Link href={`/offer?title=${k}`} className="btn btn-red mt-10">
                 Get My Offer
               </Link>
             </motion.div>

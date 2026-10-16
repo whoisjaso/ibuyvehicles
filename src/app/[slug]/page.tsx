@@ -57,7 +57,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             <h1 className="t-hero max-w-[12ch]">{title}</h1>
             <p className="lede mt-7">{lede}</p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <Link href={href} className="btn btn-ink">
+              <Link href={href} className="btn btn-red">
                 Get My Offer <ArrowRight size={20} weight="bold" />
               </Link>
               <a href={telHref} className="btn btn-outline">

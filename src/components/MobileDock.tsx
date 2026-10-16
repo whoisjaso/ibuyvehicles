@@ -23,7 +23,7 @@ export function MobileDock() {
         <a href={smsHref("Hi Mark, I want to sell my car.")} aria-label="Text Mark" className="grid size-14 shrink-0 place-items-center rounded-[4px] bg-stone">
           <ChatCircle size={22} />
         </a>
-        <Link href="/offer" className="btn btn-ink flex-1">
+        <Link href="/offer" className="btn btn-red flex-1">
           Get My Offer
         </Link>
       </div>

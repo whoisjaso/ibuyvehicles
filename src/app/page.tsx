@@ -1,7 +1,7 @@
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Lineup } from "@/components/Lineup";
-import { Statement } from "@/components/Statement";
+import { Different } from "@/components/Different";
 import { Evening } from "@/components/Evening";
 import { BuildBand } from "@/components/BuildBand";
 import { TitleRouter } from "@/components/TitleRouter";
@@ -20,7 +20,7 @@ export default function Home() {
       <main>
         <Hero />
         <Lineup />
-        <Statement />
+        <Different />
         <Evening />
         <TitleRouter />
         <BuildBand />

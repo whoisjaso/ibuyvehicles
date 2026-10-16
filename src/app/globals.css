@@ -1,24 +1,27 @@
 @import "tailwindcss";
 
 /*
-  Marque. Porsche-grade monochrome: white and near-black, cool stone greys,
-  one quiet grotesk, photography carries every colour. The emblem is the
-  only colour on the page. Buttons are black, white, or frosted over a photo.
+  Marque, in Mark's colours. Porsche-grade restraint, coloured from the emblem:
+  deep emblem navy for the dark fields, a cool blue-tinted stone for the light
+  ones, and the emblem's red reserved for the one action that matters (Get My
+  Offer). Photography carries the rest. One quiet grotesk.
   Radius rule: controls 4px, photo tiles 12px, nothing else.
 */
 :root {
   --paper: #ffffff;
-  --stone: #eeeff2;
-  --stone-2: #e3e4e8;
-  --rule: #d6d7db;
-  --ink: #0e0e12;
-  --ink-2: #4e5056;
-  --ink-3: #6b6e75;
-  --night: #0e0e12;
-  --night-2: #18191e;
-  --on-night: #f4f4f6;
-  --on-night-2: #b0b2b8;
+  --stone: #eef1f8;
+  --stone-2: #e1e6f2;
+  --rule: #d2d8e7;
+  --ink: #0b1230;
+  --ink-2: #464e69;
+  --ink-3: #5f6783;
+  --night: #0a1640;
+  --night-2: #13225a;
+  --on-night: #f3f5fb;
+  --on-night-2: #b3bedf;
   --emblem-red: #d6262d;
+  --emblem-red-2: #e8353c;
+  --emblem-blue: #1f48c9;
 
   --ease: cubic-bezier(0.25, 0.1, 0.25, 1);
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
@@ -39,6 +42,8 @@
   --color-on-night: var(--on-night);
   --color-on-night-2: var(--on-night-2);
   --color-emblem-red: var(--emblem-red);
+  --color-emblem-red-2: var(--emblem-red-2);
+  --color-emblem-blue: var(--emblem-blue);
   --font-sans: "Hanken Grotesk", system-ui, sans-serif;
 }
 
@@ -145,12 +150,20 @@ p {
   .btn:active {
     transform: scale(0.98);
   }
+  .btn-red {
+    background: var(--emblem-red);
+    color: #fff;
+    box-shadow: 0 10px 22px -12px rgba(150, 18, 24, 0.55);
+  }
+  .btn-red:hover {
+    background: var(--emblem-red-2);
+  }
   .btn-ink {
     background: var(--ink);
     color: var(--paper);
   }
   .btn-ink:hover {
-    background: #2a2b31;
+    background: var(--night-2);
   }
   .btn-paper {
     background: var(--paper);
@@ -215,19 +228,25 @@ p {
 
   /* Interim grade for the low-resolution originals until the shoot lands. */
   .mono {
-    filter: grayscale(1) contrast(1.06) brightness(0.92);
+    filter: grayscale(1) contrast(1.1) brightness(1.02);
+  }
+  /* Navy duotone over the monochrome originals: on-brand until the real shoot lands. */
+  .duo {
+    background: linear-gradient(160deg, #1f48c9 0%, #0a1640 100%);
+    mix-blend-mode: multiply;
+    opacity: 0.78;
   }
 
   /* Studio cyclorama: what an empty slot shows until its image arrives. */
   .studio {
     background:
       radial-gradient(80% 55% at 50% 78%, #ffffff 0%, rgba(255, 255, 255, 0) 70%),
-      linear-gradient(180deg, #d9dade 0%, #eceef1 58%, #e2e3e7 100%);
+      linear-gradient(180deg, #d3dbee 0%, #e9eef8 58%, #dde4f2 100%);
   }
   .studio-night {
     background:
-      radial-gradient(70% 50% at 50% 80%, #2a2c33 0%, rgba(42, 44, 51, 0) 72%),
-      linear-gradient(180deg, #08080b 0%, #121318 60%, #0b0b0e 100%);
+      radial-gradient(70% 55% at 50% 82%, #2a4bb8 0%, rgba(42, 75, 184, 0) 70%),
+      linear-gradient(180deg, #060d29 0%, #0d1b4f 60%, #081235 100%);
   }
 
   .field {

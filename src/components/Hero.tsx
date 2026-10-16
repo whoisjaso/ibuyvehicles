@@ -37,10 +37,10 @@ export function Hero() {
         <motion.div initial={reduce ? false : { opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 1.1, ease }} className="max-w-[760px]">
           <h1 className="t-hero">Cash Before The Tow.</h1>
           <p className="mt-5 max-w-[46ch] text-[1.12rem] leading-relaxed text-white/85">
-            Running or not, title or not. {business.owner} pays you at the curb, then tows it free. Often within {business.pickupWindow}.
+            Junk, wrecked, no title, won&apos;t start. {business.owner} makes the offer himself, pays you on the spot, and tows it free. Often within {business.pickupWindow}.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Link href="/offer" className="btn btn-paper">
+            <Link href="/offer" className="btn btn-red">
               Get My Offer
             </Link>
             <a href={telHref} className="btn btn-frost">

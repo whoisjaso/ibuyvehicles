@@ -41,7 +41,7 @@ export function Evening() {
               ))}
             </div>
             <p className="mt-6 max-w-[40ch] text-[15px] text-ink-3">An illustrated evening. Pickup is often within {business.pickupWindow} of your call.</p>
-            <Link href="/offer" className="btn btn-ink mt-8">
+            <Link href="/offer" className="btn btn-red mt-8">
               Get My Offer
             </Link>
           </div>
