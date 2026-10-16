@@ -530,6 +530,7 @@ function Lock({ s, range, ai, carName, onDone }: { s: State; range: Estimate; ai
   const [pref, setPref] = useState<"text" | "call">("text");
   const [notes, setNotes] = useState("");
   const [hp, setHp] = useState("");
+  const [startedAt] = useState(() => Date.now());
   const [state, setState] = useState<"idle" | "sending" | "error">("idle");
   const digits = phone.replace(/\D/g, "");
 
@@ -549,6 +550,7 @@ function Lock({ s, range, ai, carName, onDone }: { s: State; range: Estimate; ai
           preferredContact: pref,
           notes,
           company: hp,
+          startedAt,
           intent: s.situation ?? "seller",
           titleRoute: s.title,
           vehicle: { ...s.vehicle, miles: s.miles ?? undefined, drive: s.drive, damage: s.damage, keys: s.keys, parts: s.parts?.join(", ") },

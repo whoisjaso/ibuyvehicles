@@ -59,6 +59,11 @@ export function MarkChat() {
   const [title, setTitle] = useState<Title | null>(null);
   const [launcher, setLauncher] = useState(false);
   const [openNow, setOpenNow] = useState<boolean | null>(null);
+  const [contact, setContact] = useState<"closed" | "form" | "sending" | "sent" | "error">("closed");
+  const [cName, setCName] = useState("");
+  const [cPhone, setCPhone] = useState("");
+  const [hp, setHp] = useState("");
+  const shownAt = useRef(0);
   const body = useRef<HTMLDivElement>(null);
   const timers = useRef<number[]>([]);
   const { scrollY } = useScroll();
@@ -85,6 +90,7 @@ export function MarkChat() {
     timers.current = [];
     setProblem(null);
     setTitle(null);
+    setContact("closed");
     setTyping(false);
     setMsgs([]);
   }, []);
@@ -145,11 +151,50 @@ export function MarkChat() {
     return () => window.removeEventListener("keydown", onKey);
   }, [open]);
 
-  if (path?.startsWith("/offer")) return null;
+  if (path?.startsWith("/offer") || path?.startsWith("/desk") || path?.startsWith("/sign")) return null;
 
   const lastMark = [...msgs].reverse().find((m) => m.from === "mark");
   const settled = !typing && msgs.length > 0 && msgs[msgs.length - 1].from === "mark";
-  const stage = !problem ? "problem" : !title ? "title" : "done";
+  const stage = !problem ? "problem" : !title ? "title" : contact === "form" || contact === "sending" || contact === "error" ? "contact" : contact === "sent" ? "sent" : "done";
+
+  const askContact = () => {
+    shownAt.current = Date.now();
+    setContact("form");
+    setMsgs((prev) => [...prev, { from: "you", text: "Have Mark call me" }]);
+    say([{ from: "mark", text: "Happy to. What's your name and the best number?", mood: "phone" }]);
+  };
+
+  async function sendContact(e: React.FormEvent) {
+    e.preventDefault();
+    if (cName.trim().length < 2 || cPhone.replace(/\D/g, "").length < 10) return;
+    setContact("sending");
+    try {
+      const r = await fetch("/api/lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: cName,
+          phone: cPhone,
+          company: hp,
+          startedAt: shownAt.current,
+          intent: "chat",
+          preferredContact: "call",
+          titleRoute: title?.id,
+          vehicle: { drive: problem?.params.drive, damage: problem?.params.damage },
+          notes: `From Mark's chat: ${problem?.label ?? ""}; title: ${title?.label ?? ""}`,
+          page: window.location.pathname,
+          ...Object.fromEntries(new URLSearchParams(window.location.search)),
+        }),
+      });
+      if (!r.ok) throw new Error();
+      (window as unknown as { fbq?: (...a: unknown[]) => void }).fbq?.("track", "Lead");
+      setContact("sent");
+      const first = cName.trim().split(" ")[0];
+      say([{ from: "mark", text: isOpenNow() ? `Got it, ${first}. I'll call you shortly from ${business.phoneDisplay}.` : `Got it, ${first}. I'll call you first thing when we open at ${business.hours.open} AM, from ${business.phoneDisplay}.`, mood: "thumbs" }]);
+    } catch {
+      setContact("error");
+    }
+  }
   const offerHref = `/offer?${new URLSearchParams({ ...(problem?.params ?? {}), ...(title ? { title: title.id } : {}) })}`;
   const text = `Hi ${business.owner}, I want to sell my car.${problem ? ` ${problem.label}.` : ""}${title ? ` Title: ${title.label.toLowerCase()}.` : ""}`;
 
@@ -255,9 +300,28 @@ export function MarkChat() {
                         ))}
                       </div>
                     )}
+                    {stage === "contact" && (
+                      <form onSubmit={sendContact} className="grid gap-2">
+                        <input value={cName} onChange={(e) => setCName(e.target.value)} placeholder="Your name" autoComplete="name" className="field !min-h-12" aria-label="Your name" />
+                        <input value={cPhone} onChange={(e) => setCPhone(e.target.value)} placeholder="Mobile number" inputMode="tel" autoComplete="tel" className="field !min-h-12" aria-label="Mobile number" />
+                        <input value={hp} onChange={(e) => setHp(e.target.value)} tabIndex={-1} autoComplete="off" aria-hidden className="absolute -left-[9999px] h-0 w-0 opacity-0" name="company" />
+                        <button type="submit" disabled={contact === "sending"} className="btn btn-red w-full">
+                          {contact === "sending" ? "Sending" : "Call Me"}
+                        </button>
+                        {contact === "error" && <p className="text-[13px] text-emblem-red">That didn&apos;t go through. Check the number, or call {business.phoneDisplay}.</p>}
+                      </form>
+                    )}
+                    {stage === "sent" && (
+                      <Link href={offerHref} onClick={() => setOpen(false)} className="btn btn-outline w-full">
+                        See My Estimate While You Wait <ArrowRight size={18} />
+                      </Link>
+                    )}
                     {stage === "done" && (
                       <div className="grid gap-2">
-                        <Link href={offerHref} onClick={() => setOpen(false)} className="btn btn-red w-full">
+                        <button type="button" onClick={askContact} className="btn btn-red w-full">
+                          <Phone size={18} /> Have {business.owner} Call Me
+                        </button>
+                        <Link href={offerHref} onClick={() => setOpen(false)} className="btn btn-ink w-full">
                           See My Estimate <ArrowRight size={18} />
                         </Link>
                         <div className="grid grid-cols-2 gap-2">

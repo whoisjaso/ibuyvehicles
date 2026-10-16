@@ -41,3 +41,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .impeccable/review/
+
+# buy desk local stand-in data (real sellers; never commit)
+/.data/
